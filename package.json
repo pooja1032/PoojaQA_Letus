@@ -8,6 +8,6 @@
     "@types/node": "^25.9.3"
   },
   "scripts": {
-    "test:Zepto": "npx playwright test tests/Zepto.spec.ts --project=chromium --workers=1"
+    "test:zepto": "npx playwright test tests/Zepto.spec.ts --project=chromium --workers=1"
   }
 }
