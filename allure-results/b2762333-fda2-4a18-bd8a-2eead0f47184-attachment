@@ -1,0 +1,1758 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: Zepto.spec.ts >> logging into AJio website:
+- Location: tests\Zepto.spec.ts:5:5
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('a[href*="meats-fish-eggs"]').first()
+    - locator resolved to <a data-fl-index="9" href="/category/meats-fish-eggs" data-fl-widget-id="footer_categories" data-fl-element-name="Meats, Fish & Eggs" data-testid="Meats, Fish & Eggs-footer-link">…</a>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is not stable
+    - retrying click action
+    - waiting 20ms
+    - waiting for element to be visible, enabled and stable
+    - element is not stable
+  - retrying click action
+    - waiting 100ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e7]:
+      - banner [ref=e8]:
+        - generic [ref=e9]:
+          - link "Zepto Home" [ref=e10] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e11]:
+            - generic [ref=e12]:
+              - img [ref=e14]
+              - generic [ref=e16]: Delivery in minutes*
+            - button "Select Location" [ref=e17] [cursor=pointer]:
+              - heading "Select Location" [level=3] [ref=e18]
+              - img [ref=e19]
+          - link "Search for products" [ref=e22] [cursor=pointer]:
+            - /url: /search
+            - img [ref=e23]
+            - generic [ref=e26]:
+              - generic [ref=e27]: Search for
+              - generic [ref=e28]: “kurkure”
+          - button "login" [ref=e30] [cursor=pointer]:
+            - generic [ref=e31]:
+              - img [ref=e32]
+              - generic [ref=e36]: login
+          - generic [ref=e38]:
+            - button "Cart" [ref=e40] [cursor=pointer]:
+              - img [ref=e41]
+              - generic [ref=e45]: Cart
+              - generic [ref=e49]: "17"
+            - tooltip "You have 17 items in your cart." [ref=e50]: You have 17 items in your cart.
+      - generic [ref=e58]:
+        - button "All" [active] [ref=e59] [cursor=pointer]:
+          - generic [ref=e60]: All
+        - button "Cafe" [ref=e62] [cursor=pointer]:
+          - generic [ref=e63]: Cafe
+        - button "Home" [ref=e65] [cursor=pointer]:
+          - generic [ref=e66]: Home
+        - button "Toys" [ref=e68] [cursor=pointer]:
+          - generic [ref=e69]: Toys
+        - button "Fresh" [ref=e71] [cursor=pointer]:
+          - generic [ref=e72]: Fresh
+        - button "Electronics" [ref=e74] [cursor=pointer]:
+          - generic [ref=e75]: Electronics
+        - button "Mobiles" [ref=e77] [cursor=pointer]:
+          - generic [ref=e78]: Mobiles
+        - button "Beauty" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: Beauty
+        - button "Fashion" [ref=e83] [cursor=pointer]:
+          - generic [ref=e84]: Fashion
+      - generic [ref=e90]:
+        - generic [ref=e95]:
+          - link "38047553-95f3-47c6-a1ff-4794e1227d3a.png" [ref=e97] [cursor=pointer]:
+            - /url: /cn/fruits-vegetables/fruits-vegetables/cid/64374cfe-d06f-4a01-898e-c07c46462c36/scid/e78a8422-5f20-4e4b-9a9f-22a0e53962e3
+            - img "38047553-95f3-47c6-a1ff-4794e1227d3a.png" [ref=e98]
+          - link "474e6e58-1894-4378-86f1-168cc7266d1a.png" [ref=e100] [cursor=pointer]:
+            - /url: /cn/dairy-bread-eggs/dairy-bread-eggs/cid/4b938e02-7bde-4479-bc0a-2b54cb6bd5f5/scid/22964a2b-0439-4236-9950-0d71b532b243
+            - img "474e6e58-1894-4378-86f1-168cc7266d1a.png" [ref=e101]
+          - link "dc4a299d-521f-4a64-8205-c5ba8e1d13e3.png" [ref=e103] [cursor=pointer]:
+            - /url: /cn/atta-rice-oil-dals/atta-rice-oil-dals/cid/2f7190d0-7c40-458b-b450-9a1006db3d95/scid/2b5e863c-9497-46ae-a7e9-85f6ef7380da
+            - img "dc4a299d-521f-4a64-8205-c5ba8e1d13e3.png" [ref=e104]
+          - link "1237afd6-40bf-4942-a266-25f23025e86c.png" [ref=e106] [cursor=pointer]:
+            - /url: /cn/meats-fish-eggs/meats-fish-eggs/cid/4654bd8a-fb30-4ee1-ab30-4bf581b6c6e3/scid/95157c69-f03e-48e5-ae2f-d947af34397f
+            - img "1237afd6-40bf-4942-a266-25f23025e86c.png" [ref=e107]
+          - link "8d4d3977-5197-49d9-9867-8a670524e48b.png" [ref=e109] [cursor=pointer]:
+            - /url: /cn/masala-dry-fruits-more/masala-dry-fruits-more/cid/0c2ccf87-e32c-4438-9560-8d9488fc73e0/scid/8b44cef2-1bab-407e-aadd-29254e6778fa
+            - img "8d4d3977-5197-49d9-9867-8a670524e48b.png" [ref=e110]
+          - link "ab241d87-da5b-4830-b38f-1a6cd30d0d41.png" [ref=e112] [cursor=pointer]:
+            - /url: /cn/breakfast-sauces/breakfast-sauces/cid/f804bccc-c565-4879-b6ab-1b964bb1ed41/scid/c07e4c22-d076-45b0-9c73-92c117956810
+            - img "ab241d87-da5b-4830-b38f-1a6cd30d0d41.png" [ref=e113]
+          - link "3b0ce887-3b38-4450-b7da-9da0ad8b799d.png" [ref=e115] [cursor=pointer]:
+            - /url: /cn/packaged-food/packaged-food/cid/5736ad99-f589-4d58-a24b-a12222320a37/scid/dbb39a86-256b-4664-81ed-6668418a5436
+            - img "3b0ce887-3b38-4450-b7da-9da0ad8b799d.png" [ref=e116]
+          - link "031c2a24-d40f-4272-8c71-8a566252495e.png" [ref=e118] [cursor=pointer]:
+            - /url: /pip/zepto-cafe/35185
+            - img "031c2a24-d40f-4272-8c71-8a566252495e.png" [ref=e119]
+          - link "f078a8dc-a9b6-41a6-9c6f-721d4892b8ee.png" [ref=e121] [cursor=pointer]:
+            - /url: /cn/tea-coffee-more/tea-coffee-more/cid/d7e98d87-6850-4cf9-a37c-e4fa34ae302c/scid/e6763c2d-0bf3-4332-82e4-0c8df1c94cad
+            - img "f078a8dc-a9b6-41a6-9c6f-721d4892b8ee.png" [ref=e122]
+          - link "db346f5e-644f-426a-85af-92d707e086ac.png" [ref=e124] [cursor=pointer]:
+            - /url: /cn/ice-creams-more/ice-creams-more/cid/65ee1b69-4e24-45b9-ac84-aace3c0854d8/scid/21c1011a-c677-4007-ac20-abc1542cb89c
+            - img "db346f5e-644f-426a-85af-92d707e086ac.png" [ref=e125]
+          - link "366e5b7d-2028-4935-b9f1-75bfa085c3d7.png" [ref=e127] [cursor=pointer]:
+            - /url: /cn/frozen-food/frozen-food/cid/aae1447d-1403-4a5c-a65f-bcb3afb93b5e/scid/dd3fd11a-5ed1-40a9-8e3c-edf3b82e7d32
+            - img "366e5b7d-2028-4935-b9f1-75bfa085c3d7.png" [ref=e128]
+          - link "ec7b14c6-2640-4165-b3ae-68c09a249ae0.png" [ref=e130] [cursor=pointer]:
+            - /url: /cn/sweet-cravings/sweet-cravings/cid/adab2f81-7140-4fe9-b8cf-3d809f40e38a/scid/ca984d2d-70b8-464c-b182-41aa328b3d4b
+            - img "ec7b14c6-2640-4165-b3ae-68c09a249ae0.png" [ref=e131]
+          - link "42360a5c-b732-4979-8a9b-4e6af192b6d9.png" [ref=e133] [cursor=pointer]:
+            - /url: /cn/cold-drinks-juices/cold-drinks-juices/cid/947a72ae-b371-45cb-ad3a-778c05b64399/scid/7dceec53-78f9-4f06-83d7-c8edd9c2f71a
+            - img "42360a5c-b732-4979-8a9b-4e6af192b6d9.png" [ref=e134]
+          - link "90b2faee-1461-465a-a8c6-8c84716dd7dc.png" [ref=e136] [cursor=pointer]:
+            - /url: /cn/munchies/munchies/cid/d2c2a144-43cd-43e5-b308-92628fa68596/scid/d648ea7c-18f0-4178-a202-4751811b086b
+            - img "90b2faee-1461-465a-a8c6-8c84716dd7dc.png" [ref=e137]
+          - link "9b88fff5-73f5-46fd-999f-1622db4203d7.png" [ref=e139] [cursor=pointer]:
+            - /url: /cn/biscuits/biscuits/cid/2552acf2-2f77-4714-adc8-e505de3985db/scid/3a10723e-ba14-4e5c-bdeb-a4dce2c1bec4
+            - img "9b88fff5-73f5-46fd-999f-1622db4203d7.png" [ref=e140]
+          - link "0937caed-95d8-4e6f-a300-b0d0f57ae4b0.png" [ref=e142] [cursor=pointer]:
+            - /url: /pip/apparel-lifestyle/33402
+            - img "0937caed-95d8-4e6f-a300-b0d0f57ae4b0.png" [ref=e143]
+          - link "f848db71-de7c-45a7-af32-cf08d8ebf4e1.png" [ref=e145] [cursor=pointer]:
+            - /url: /pip/jewellery/32366
+            - img "f848db71-de7c-45a7-af32-cf08d8ebf4e1.png" [ref=e146]
+          - link "47e96dc9-e9e5-47d1-b5b3-c967bb8f963f.png" [ref=e148] [cursor=pointer]:
+            - /url: /pip/beauty-personal-care/35204
+            - img "47e96dc9-e9e5-47d1-b5b3-c967bb8f963f.png" [ref=e149]
+          - link "ae10877f-fbb9-41c7-be21-e74642532825.png" [ref=e151] [cursor=pointer]:
+            - /url: /pip/skincare/35214
+            - img "ae10877f-fbb9-41c7-be21-e74642532825.png" [ref=e152]
+          - link "91b5ee91-38a4-4654-93db-ba948f6265ea.png" [ref=e154] [cursor=pointer]:
+            - /url: /pip/makeup-beauty/35211
+            - img "91b5ee91-38a4-4654-93db-ba948f6265ea.png" [ref=e155]
+          - link "543ccb3a-df06-4d10-a6ab-ef0f33240667.png" [ref=e157] [cursor=pointer]:
+            - /url: /pip/fragrances-grooming/35215
+            - img "543ccb3a-df06-4d10-a6ab-ef0f33240667.png" [ref=e158]
+          - link "e89563f7-f600-4e68-8c1e-c5144cb20ff3.png" [ref=e160] [cursor=pointer]:
+            - /url: /pip/bath-body/35216
+            - img "e89563f7-f600-4e68-8c1e-c5144cb20ff3.png" [ref=e161]
+          - link "dc521fcb-3d99-4bff-967e-ff95dcdc0742.png" [ref=e163] [cursor=pointer]:
+            - /url: /pip/hair-care/35217
+            - img "dc521fcb-3d99-4bff-967e-ff95dcdc0742.png" [ref=e164]
+          - link "99ab3c6f-c4fe-4b2a-8d9f-89ea8f550022.png" [ref=e166] [cursor=pointer]:
+            - /url: /cn/baby-care/baby-care/cid/0118c4f5-750c-4929-a734-b4ef454e265b/scid/b998e39c-6948-42f2-84bb-947f07f2ceca
+            - img "99ab3c6f-c4fe-4b2a-8d9f-89ea8f550022.png" [ref=e167]
+          - link "0da227bf-f9c1-4688-b26a-8ee28dcdaa8e.png" [ref=e169] [cursor=pointer]:
+            - /url: /pip/protein-nutrition/30619
+            - img "0da227bf-f9c1-4688-b26a-8ee28dcdaa8e.png" [ref=e170]
+          - link "8cc38a79-68a7-46bf-97e8-d0424aff0238.png" [ref=e172] [cursor=pointer]:
+            - /url: /pip/pharma-wellness/35173
+            - img "8cc38a79-68a7-46bf-97e8-d0424aff0238.png" [ref=e173]
+          - link "2b267097-f22b-4269-be34-1ea534ced3d4.png" [ref=e175] [cursor=pointer]:
+            - /url: /cn/feminine-hygiene/feminine-hygiene/cid/72066480-9851-4263-89b6-50dd7525edc1/scid/56983fec-fd04-4190-9587-20e0a6fc4642
+            - img "2b267097-f22b-4269-be34-1ea534ced3d4.png" [ref=e176]
+          - link "f4371151-d6ed-42d6-9338-8f7391d03fec.png" [ref=e178] [cursor=pointer]:
+            - /url: /cn/sexual-wellness/personal-massager-vibrator/cid/5ff01c62-4d1a-4eae-b566-2fe3b345abe9/scid/1c3ad1c2-76e8-4097-b2ca-99c180d23b96
+            - img "f4371151-d6ed-42d6-9338-8f7391d03fec.png" [ref=e179]
+          - link "6d210757-5164-4312-bce1-5588fe2c0318.png" [ref=e181] [cursor=pointer]:
+            - /url: /pip/home-needs/100000701
+            - img "6d210757-5164-4312-bce1-5588fe2c0318.png" [ref=e182]
+          - link "5e879a06-fcc3-4e9c-82ae-c05dc1c9d308.png" [ref=e184] [cursor=pointer]:
+            - /url: /pip/kitchen-dining/100000740
+            - img "5e879a06-fcc3-4e9c-82ae-c05dc1c9d308.png" [ref=e185]
+          - link "88c8608b-5377-425a-9bdc-d659354a7fa9.png" [ref=e187] [cursor=pointer]:
+            - /url: /cn/cleaning-essentials/cleaning-essentials/cid/1a7e46a8-e627-450f-8960-490b550eeee6/scid/3b8d9db5-1953-4593-b4ce-8593f6fbd67a
+            - img "88c8608b-5377-425a-9bdc-d659354a7fa9.png" [ref=e188]
+          - link "bf2209fa-62dd-47d5-a461-494cf8300d50.png" [ref=e190] [cursor=pointer]:
+            - /url: /pip/electronics-appliances/14025
+            - img "bf2209fa-62dd-47d5-a461-494cf8300d50.png" [ref=e191]
+          - link "e6336a1b-eead-42d5-9c4d-23e22e3ebf2d.png" [ref=e193] [cursor=pointer]:
+            - /url: /cn/pet-care/pet-care/cid/13831a81-e0d5-4939-9650-df2413e7aead/scid/8f39b80f-2682-4038-befa-c0001465647d
+            - img "e6336a1b-eead-42d5-9c4d-23e22e3ebf2d.png" [ref=e194]
+          - link "8d4fb022-bae0-432d-92c8-2b12d97ee6cc.png" [ref=e196] [cursor=pointer]:
+            - /url: /pip/toys-sports/11911
+            - img "8d4fb022-bae0-432d-92c8-2b12d97ee6cc.png" [ref=e197]
+          - link "b5cfc944-9611-4f08-b4f9-a071d07b1aad.png" [ref=e199] [cursor=pointer]:
+            - /url: /pip/stationery-books/34366
+            - img "b5cfc944-9611-4f08-b4f9-a071d07b1aad.png" [ref=e200]
+          - link "6d26710a-1dd8-4d53-9884-33bbaebc4bf4.png" [ref=e202] [cursor=pointer]:
+            - /url: /cn/paan-corner/paan-corner/cid/cd50825e-baf8-47fe-9abc-ed9556122a9a/scid/fe094fb9-e92a-4c51-98ad-fa0fc7e57609
+            - img "6d26710a-1dd8-4d53-9884-33bbaebc4bf4.png" [ref=e203]
+        - generic [ref=e208]:
+          - generic [ref=e209]:
+            - link "go to Everyday lowest price" [disabled]:
+              - /url: "#"
+              - img "Everyday lowest price"
+          - link "go to Paan" [ref=e211] [cursor=pointer]:
+            - /url: /cn/paan-corner/cigarettes/cid/cd50825e-baf8-47fe-9abc-ed9556122a9a/scid/5bcbee47-7c83-4279-80f0-7ecc068496df
+            - img "Paan" [ref=e212]
+        - generic [ref=e213]:
+          - generic [ref=e215]:
+            - heading "Laundry Care" [level=4] [ref=e216]
+            - button "See All" [ref=e217] [cursor=pointer]:
+              - text: See All
+              - img [ref=e219]
+          - generic [ref=e223]:
+            - link "Rin Matic Top Load Detergent Liquid | Pouch ADD ₹179 ₹260 ₹81 OFF Rin Matic Top Load Detergent Liquid | Pouch 1 pack (2 kg) 4.8 (41.0k)" [ref=e225] [cursor=pointer]:
+              - /url: /pn/rin-matic-top-load-detergent-liquid-pouch/pvid/5f54bb83-f3e0-4d8d-89b0-6339f3312089
+              - generic [ref=e226]:
+                - generic [ref=e228]:
+                  - img "Rin Matic Top Load Detergent Liquid | Pouch" [ref=e229]
+                  - button "ADD" [ref=e230]
+                - generic [ref=e231]:
+                  - generic [ref=e232]: ₹179
+                  - generic [ref=e233]: ₹260
+                - generic [ref=e235]:
+                  - generic [ref=e236]: ₹81
+                  - generic [ref=e237]: "OFF"
+                - generic [ref=e239]: Rin Matic Top Load Detergent Liquid | Pouch
+                - generic [ref=e240]: 1 pack (2 kg)
+                - generic [ref=e241]:
+                  - generic [ref=e242]:
+                    - img [ref=e243]
+                    - text: "4.8"
+                  - generic [ref=e245]: (41.0k)
+            - link "Hapiso Laundry Pods - Tropical Breeze ADD ₹304 ₹375 ₹71 OFF Hapiso Laundry Pods - Tropical Breeze 1 pack (15 pcs)" [ref=e247] [cursor=pointer]:
+              - /url: /pn/hapiso-laundry-pods-tropical-breeze/pvid/9a8caeda-a2c1-48e8-b24d-7fc19d7c72db
+              - generic [ref=e248]:
+                - generic [ref=e250]:
+                  - img "Hapiso Laundry Pods - Tropical Breeze" [ref=e251]
+                  - button "ADD" [ref=e252]
+                - generic [ref=e253]:
+                  - generic [ref=e254]: ₹304
+                  - generic [ref=e255]: ₹375
+                - generic [ref=e257]:
+                  - generic [ref=e258]: ₹71
+                  - generic [ref=e259]: "OFF"
+                - generic [ref=e261]: Hapiso Laundry Pods - Tropical Breeze
+                - generic [ref=e262]: 1 pack (15 pcs)
+            - link "Surf Excel Matic Front Load Detergent Liquid | Pouch ADD ₹699 ₹932 ₹233 OFF Surf Excel Matic Front Load Detergent Liquid | Pouch 1 pack (5 kg) Stain Removal 4.8 (8.0k) Bestseller" [ref=e264] [cursor=pointer]:
+              - /url: /pn/surf-excel-matic-front-load-detergent-liquid-pouch/pvid/bf256d5b-e21d-4825-b6cb-9dc36a54199b
+              - generic [ref=e265]:
+                - generic [ref=e267]:
+                  - img "Surf Excel Matic Front Load Detergent Liquid | Pouch" [ref=e268]
+                  - button "ADD" [ref=e269]
+                - generic [ref=e270]:
+                  - generic [ref=e271]: ₹699
+                  - generic [ref=e272]: ₹932
+                - generic [ref=e274]:
+                  - generic [ref=e275]: ₹233
+                  - generic [ref=e276]: "OFF"
+                - generic [ref=e278]: Surf Excel Matic Front Load Detergent Liquid | Pouch
+                - generic [ref=e279]: 1 pack (5 kg)
+                - generic [ref=e281]: Stain Removal
+                - generic [ref=e282]:
+                  - generic [ref=e283]:
+                    - img [ref=e284]
+                    - text: "4.8"
+                  - generic [ref=e286]: (8.0k)
+                - generic [ref=e287]: Bestseller
+            - link "Surf Excel Matic Top Load Detergent Liquid Refill | Tough Dried Stain Removal ADD ₹259 ₹329 ₹70 OFF Surf Excel Matic Top Load Detergent Liquid Refill | Tough Dried Stain Removal 1 pack (2 kg) 4.9 (15.4k)" [ref=e289] [cursor=pointer]:
+              - /url: /pn/surf-excel-matic-top-load-detergent-liquid-refill-tough-dried-stain-removal/pvid/fec05601-e917-47c0-954e-0db9b9851924
+              - generic [ref=e290]:
+                - generic [ref=e292]:
+                  - img "Surf Excel Matic Top Load Detergent Liquid Refill | Tough Dried Stain Removal" [ref=e293]
+                  - button "ADD" [ref=e294]
+                - generic [ref=e295]:
+                  - generic [ref=e296]: ₹259
+                  - generic [ref=e297]: ₹329
+                - generic [ref=e299]:
+                  - generic [ref=e300]: ₹70
+                  - generic [ref=e301]: "OFF"
+                - generic [ref=e303]: Surf Excel Matic Top Load Detergent Liquid Refill | Tough Dried Stain Removal
+                - generic [ref=e304]: 1 pack (2 kg)
+                - generic [ref=e305]:
+                  - generic [ref=e306]:
+                    - img [ref=e307]
+                    - text: "4.9"
+                  - generic [ref=e309]: (15.4k)
+            - link "Wheel Detergent Powder ADD ₹209 ₹258 ₹49 OFF Wheel Detergent Powder 1 pack (4 kg) Super Saver Pack 4.7 (19.6k)" [ref=e311] [cursor=pointer]:
+              - /url: /pn/wheel-detergent-powder/pvid/801a3cdd-0abe-4134-a438-7f6d570ebb19
+              - generic [ref=e312]:
+                - generic [ref=e314]:
+                  - img "Wheel Detergent Powder" [ref=e315]
+                  - button "ADD" [ref=e316]
+                - generic [ref=e317]:
+                  - generic [ref=e318]: ₹209
+                  - generic [ref=e319]: ₹258
+                - generic [ref=e321]:
+                  - generic [ref=e322]: ₹49
+                  - generic [ref=e323]: "OFF"
+                - generic [ref=e325]: Wheel Detergent Powder
+                - generic [ref=e326]: 1 pack (4 kg)
+                - generic [ref=e328]: Super Saver Pack
+                - generic [ref=e329]:
+                  - generic [ref=e330]:
+                    - img [ref=e331]
+                    - text: "4.7"
+                  - generic [ref=e333]: (19.6k)
+            - link "Surf Excel Matic Top Load Detergent Liquid | Pouch ADD ₹529 ₹780 ₹251 OFF Surf Excel Matic Top Load Detergent Liquid | Pouch 1 pack (5 kg) 4.7 (14.8k)" [ref=e335] [cursor=pointer]:
+              - /url: /pn/surf-excel-matic-top-load-detergent-liquid-pouch/pvid/a3e1b947-86b8-4311-ab00-8b47928c8b0a
+              - generic [ref=e336]:
+                - generic [ref=e338]:
+                  - img "Surf Excel Matic Top Load Detergent Liquid | Pouch" [ref=e339]
+                  - button "ADD" [ref=e340]
+                - generic [ref=e341]:
+                  - generic [ref=e342]: ₹529
+                  - generic [ref=e343]: ₹780
+                - generic [ref=e345]:
+                  - generic [ref=e346]: ₹251
+                  - generic [ref=e347]: "OFF"
+                - generic [ref=e349]: Surf Excel Matic Top Load Detergent Liquid | Pouch
+                - generic [ref=e350]: 1 pack (5 kg)
+                - generic [ref=e351]:
+                  - generic [ref=e352]:
+                    - img [ref=e353]
+                    - text: "4.7"
+                  - generic [ref=e355]: (14.8k)
+            - link "Morelight Extra Power Detergent Powder ADD ₹274 ₹540 ₹266 OFF Morelight Extra Power Detergent Powder 1 pack (4 kg) Fabric Protect 4.8 (14.0k)" [ref=e357] [cursor=pointer]:
+              - /url: /pn/morelight-extra-power-detergent-powder/pvid/580cbe7a-f2ce-40f2-b41b-94ba139c0d7a
+              - generic [ref=e358]:
+                - generic [ref=e360]:
+                  - img "Morelight Extra Power Detergent Powder" [ref=e361]
+                  - button "ADD" [ref=e362]
+                - generic [ref=e363]:
+                  - generic [ref=e364]: ₹274
+                  - generic [ref=e365]: ₹540
+                - generic [ref=e367]:
+                  - generic [ref=e368]: ₹266
+                  - generic [ref=e369]: "OFF"
+                - generic [ref=e371]: Morelight Extra Power Detergent Powder
+                - generic [ref=e372]: 1 pack (4 kg)
+                - generic [ref=e374]: Fabric Protect
+                - generic [ref=e375]:
+                  - generic [ref=e376]:
+                    - img [ref=e377]
+                    - text: "4.8"
+                  - generic [ref=e379]: (14.0k)
+            - link "Surf Excel Matic Front Load Detergent Liquid ADD ₹489 ₹595 ₹106 OFF Surf Excel Matic Front Load Detergent Liquid 1 pc (3 kg) Stain Removal 4.7 (3.7k)" [ref=e381] [cursor=pointer]:
+              - /url: /pn/surf-excel-matic-front-load-detergent-liquid/pvid/178e11bf-6864-4f37-9319-74d8079086b6
+              - generic [ref=e382]:
+                - generic [ref=e384]:
+                  - img "Surf Excel Matic Front Load Detergent Liquid" [ref=e385]
+                  - button "ADD" [ref=e386]
+                - generic [ref=e387]:
+                  - generic [ref=e388]: ₹489
+                  - generic [ref=e389]: ₹595
+                - generic [ref=e391]:
+                  - generic [ref=e392]: ₹106
+                  - generic [ref=e393]: "OFF"
+                - generic [ref=e395]: Surf Excel Matic Front Load Detergent Liquid
+                - generic [ref=e396]: 1 pc (3 kg)
+                - generic [ref=e398]: Stain Removal
+                - generic [ref=e399]:
+                  - generic [ref=e400]:
+                    - img [ref=e401]
+                    - text: "4.7"
+                  - generic [ref=e403]: (3.7k)
+            - link "Morelight Detergent Liquid | Pouch ADD ₹399 ₹599 ₹200 OFF Morelight Detergent Liquid | Pouch 1 pack (5 L) 4.9 (6.9k)" [ref=e405] [cursor=pointer]:
+              - /url: /pn/morelight-detergent-liquid-pouch/pvid/ce7887ce-3fd7-46c3-8173-b2dbe363f43b
+              - generic [ref=e406]:
+                - generic [ref=e408]:
+                  - img "Morelight Detergent Liquid | Pouch" [ref=e409]
+                  - button "ADD" [ref=e410]
+                - generic [ref=e411]:
+                  - generic [ref=e412]: ₹399
+                  - generic [ref=e413]: ₹599
+                - generic [ref=e415]:
+                  - generic [ref=e416]: ₹200
+                  - generic [ref=e417]: "OFF"
+                - generic [ref=e419]: Morelight Detergent Liquid | Pouch
+                - generic [ref=e420]: 1 pack (5 L)
+                - generic [ref=e421]:
+                  - generic [ref=e422]:
+                    - img [ref=e423]
+                    - text: "4.9"
+                  - generic [ref=e425]: (6.9k)
+            - link "Ariel Power Gel Liquid Detergent for Top load washing machine ADD ₹310 ₹345 ₹35 OFF Ariel Power Gel Liquid Detergent for Top load washing machine 1 pack (2 kg) 4.7 (3.1k)" [ref=e427] [cursor=pointer]:
+              - /url: /pn/ariel-power-gel-liquid-detergent-for-top-load-washing-machine/pvid/cb1a2e96-51b9-41d7-bd71-ac4726cc9beb
+              - generic [ref=e428]:
+                - generic [ref=e430]:
+                  - img "Ariel Power Gel Liquid Detergent for Top load washing machine" [ref=e431]
+                  - button "ADD" [ref=e432]
+                - generic [ref=e433]:
+                  - generic [ref=e434]: ₹310
+                  - generic [ref=e435]: ₹345
+                - generic [ref=e437]:
+                  - generic [ref=e438]: ₹35
+                  - generic [ref=e439]: "OFF"
+                - generic [ref=e441]: Ariel Power Gel Liquid Detergent for Top load washing machine
+                - generic [ref=e442]: 1 pack (2 kg)
+                - generic [ref=e443]:
+                  - generic [ref=e444]:
+                    - img [ref=e445]
+                    - text: "4.7"
+                  - generic [ref=e447]: (3.1k)
+        - generic [ref=e451]:
+          - link "Happi Planet Kitchen Cleaner Spray | Suitable for Stoves, Chimneys, Appliances & Cabinets ADD ₹199 ₹299 ₹100 OFF Happi Planet Kitchen Cleaner Spray | Suitable for Stoves, Chimneys, Appliances & Cabinets 1 pc (500 ml) Instant Clean 4.5 (3.0k)" [ref=e453] [cursor=pointer]:
+            - /url: /pn/happi-planet-kitchen-cleaner-spray-suitable-for-stoves-chimneys-appliances-cabinets/pvid/15a882fb-7819-4c00-af15-2f3d320d27a2
+            - generic [ref=e454]:
+              - generic [ref=e456]:
+                - img "Happi Planet Kitchen Cleaner Spray | Suitable for Stoves, Chimneys, Appliances & Cabinets" [ref=e457]
+                - button "ADD" [ref=e458]
+              - generic [ref=e459]:
+                - generic [ref=e460]: ₹199
+                - generic [ref=e461]: ₹299
+              - generic [ref=e463]:
+                - generic [ref=e464]: ₹100
+                - generic [ref=e465]: "OFF"
+              - generic [ref=e467]: Happi Planet Kitchen Cleaner Spray | Suitable for Stoves, Chimneys, Appliances & Cabinets
+              - generic [ref=e468]: 1 pc (500 ml)
+              - generic [ref=e470]: Instant Clean
+              - generic [ref=e471]:
+                - generic [ref=e472]:
+                  - img [ref=e473]
+                  - text: "4.5"
+                - generic [ref=e475]: (3.0k)
+          - link "Mr. Muscle Kitchen Cleaner Spray, Fresh Lemon ADD ₹209 ₹249 ₹40 OFF Mr. Muscle Kitchen Cleaner Spray, Fresh Lemon 1 pc (450 ml) 4.7 (4.0k)" [ref=e477] [cursor=pointer]:
+            - /url: /pn/mr-muscle-kitchen-cleaner-spray-fresh-lemon/pvid/2ab6d6a6-e042-4020-a115-ea31d521b60c
+            - generic [ref=e478]:
+              - generic [ref=e480]:
+                - img "Mr. Muscle Kitchen Cleaner Spray, Fresh Lemon" [ref=e481]
+                - button "ADD" [ref=e482]
+              - generic [ref=e483]:
+                - generic [ref=e484]: ₹209
+                - generic [ref=e485]: ₹249
+              - generic [ref=e487]:
+                - generic [ref=e488]: ₹40
+                - generic [ref=e489]: "OFF"
+              - generic [ref=e491]: Mr. Muscle Kitchen Cleaner Spray, Fresh Lemon
+              - generic [ref=e492]: 1 pc (450 ml)
+              - generic [ref=e493]:
+                - generic [ref=e494]:
+                  - img [ref=e495]
+                  - text: "4.7"
+                - generic [ref=e497]: (4.0k)
+          - link "Harpic Lemon Bathroom Cleaner Liquid | Removes Bathroom Stains ADD ₹185 ₹230 ₹45 OFF Harpic Lemon Bathroom Cleaner Liquid | Removes Bathroom Stains 1 pc (1 L) 4.7 (9.6k)" [ref=e499] [cursor=pointer]:
+            - /url: /pn/harpic-lemon-bathroom-cleaner-liquid-removes-bathroom-stains/pvid/96c60b09-1afa-4060-819b-ad8b585f43f7
+            - generic [ref=e500]:
+              - generic [ref=e502]:
+                - img "Harpic Lemon Bathroom Cleaner Liquid | Removes Bathroom Stains" [ref=e503]
+                - button "ADD" [ref=e504]
+              - generic [ref=e505]:
+                - generic [ref=e506]: ₹185
+                - generic [ref=e507]: ₹230
+              - generic [ref=e509]:
+                - generic [ref=e510]: ₹45
+                - generic [ref=e511]: "OFF"
+              - generic [ref=e513]: Harpic Lemon Bathroom Cleaner Liquid | Removes Bathroom Stains
+              - generic [ref=e514]: 1 pc (1 L)
+              - generic [ref=e515]:
+                - generic [ref=e516]:
+                  - img [ref=e517]
+                  - text: "4.7"
+                - generic [ref=e519]: (9.6k)
+          - link "BECO Max Kitchen Cleaner Liquid ADD ₹180 ₹249 ₹69 OFF BECO Max Kitchen Cleaner Liquid 1 pc (500 ml) 4.5 (717)" [ref=e521] [cursor=pointer]:
+            - /url: /pn/beco-max-kitchen-cleaner-liquid/pvid/05dcece8-00e5-430c-8cb0-96d2bba55ed6
+            - generic [ref=e522]:
+              - generic [ref=e524]:
+                - img "BECO Max Kitchen Cleaner Liquid" [ref=e525]
+                - button "ADD" [ref=e526]
+              - generic [ref=e527]:
+                - generic [ref=e528]: ₹180
+                - generic [ref=e529]: ₹249
+              - generic [ref=e531]:
+                - generic [ref=e532]: ₹69
+                - generic [ref=e533]: "OFF"
+              - generic [ref=e535]: BECO Max Kitchen Cleaner Liquid
+              - generic [ref=e536]: 1 pc (500 ml)
+              - generic [ref=e537]:
+                - generic [ref=e538]:
+                  - img [ref=e539]
+                  - text: "4.5"
+                - generic [ref=e541]: (717)
+          - link "Gala No Dust Floor Cleaning Broom | Jhadu 90cm, Plastic, Blue and Brown ADD ₹170 ₹200 ₹30 OFF Gala No Dust Floor Cleaning Broom | Jhadu 90cm, Plastic, Blue and Brown 1 pack 4.1 (18.7k)" [ref=e543] [cursor=pointer]:
+            - /url: /pn/gala-no-dust-floor-cleaning-broom-jhadu-90cm-plastic-blue-and-brown/pvid/70e5173b-4ced-4ecb-a4bb-2f3a9bd0b4b5
+            - generic [ref=e544]:
+              - generic [ref=e546]:
+                - img "Gala No Dust Floor Cleaning Broom | Jhadu 90cm, Plastic, Blue and Brown" [ref=e547]
+                - button "ADD" [ref=e548]
+              - generic [ref=e549]:
+                - generic [ref=e550]: ₹170
+                - generic [ref=e551]: ₹200
+              - generic [ref=e553]:
+                - generic [ref=e554]: ₹30
+                - generic [ref=e555]: "OFF"
+              - generic [ref=e557]: Gala No Dust Floor Cleaning Broom | Jhadu 90cm, Plastic, Blue and Brown
+              - generic [ref=e558]: 1 pack
+              - generic [ref=e559]:
+                - generic [ref=e560]:
+                  - img [ref=e561]
+                  - text: "4.1"
+                - generic [ref=e563]: (18.7k)
+          - link "Lizol Kitchen Cleaning Spray | Cleans Stove, Chimney & Sink ADD ₹198 ₹225 ₹27 OFF Lizol Kitchen Cleaning Spray | Cleans Stove, Chimney & Sink 1 pc (450 ml) 4.8 (3.2k)" [ref=e565] [cursor=pointer]:
+            - /url: /pn/lizol-kitchen-cleaning-spray-cleans-stove-chimney-sink/pvid/6fd23add-c793-4e4b-b671-35ec637117f1
+            - generic [ref=e566]:
+              - generic [ref=e568]:
+                - img "Lizol Kitchen Cleaning Spray | Cleans Stove, Chimney & Sink" [ref=e569]
+                - button "ADD" [ref=e570]
+              - generic [ref=e571]:
+                - generic [ref=e572]: ₹198
+                - generic [ref=e573]: ₹225
+              - generic [ref=e575]:
+                - generic [ref=e576]: ₹27
+                - generic [ref=e577]: "OFF"
+              - generic [ref=e579]: Lizol Kitchen Cleaning Spray | Cleans Stove, Chimney & Sink
+              - generic [ref=e580]: 1 pc (450 ml)
+              - generic [ref=e581]:
+                - generic [ref=e582]:
+                  - img [ref=e583]
+                  - text: "4.8"
+                - generic [ref=e585]: (3.2k)
+          - link "Beco Natural Floor Cleaner Liquid ADD ₹139 ₹205 ₹66 OFF Beco Natural Floor Cleaner Liquid 1 pc (1 L) 4.8 (5.5k)" [ref=e587] [cursor=pointer]:
+            - /url: /pn/beco-natural-floor-cleaner-liquid/pvid/5a4c82f3-2ac8-48e9-82f4-b39f92e1013c
+            - generic [ref=e588]:
+              - generic [ref=e590]:
+                - img "Beco Natural Floor Cleaner Liquid" [ref=e591]
+                - button "ADD" [ref=e592]
+              - generic [ref=e593]:
+                - generic [ref=e594]: ₹139
+                - generic [ref=e595]: ₹205
+              - generic [ref=e597]:
+                - generic [ref=e598]: ₹66
+                - generic [ref=e599]: "OFF"
+              - generic [ref=e601]: Beco Natural Floor Cleaner Liquid
+              - generic [ref=e602]: 1 pc (1 L)
+              - generic [ref=e603]:
+                - generic [ref=e604]:
+                  - img [ref=e605]
+                  - text: "4.8"
+                - generic [ref=e607]: (5.5k)
+          - link "Elbow Grease Pink All Purpose Degreaser ADD ₹425 Elbow Grease Pink All Purpose Degreaser 1 pc (1 L)" [ref=e609] [cursor=pointer]:
+            - /url: /pn/elbow-grease-pink-all-purpose-degreaser/pvid/ceae9823-993c-4d33-bd6a-e0e8f967ce4e
+            - generic [ref=e610]:
+              - generic [ref=e612]:
+                - img "Elbow Grease Pink All Purpose Degreaser" [ref=e613]
+                - button "ADD" [ref=e614]
+              - generic [ref=e616]: ₹425
+              - generic [ref=e617]: Elbow Grease Pink All Purpose Degreaser
+              - generic [ref=e618]: 1 pc (1 L)
+          - link "BAY6 White Phenyl Tough Dirt Removal Germ Fighter ADD ₹149 ₹360 ₹211 OFF BAY6 White Phenyl Tough Dirt Removal Germ Fighter 1 pc (5 L) 4.6 (2.9k)" [ref=e620] [cursor=pointer]:
+            - /url: /pn/bay6-white-phenyl-tough-dirt-removal-germ-fighter/pvid/84d1143d-9708-4755-a718-34b3f18bc2ce
+            - generic [ref=e621]:
+              - generic [ref=e623]:
+                - img "BAY6 White Phenyl Tough Dirt Removal Germ Fighter" [ref=e624]
+                - button "ADD" [ref=e625]
+              - generic [ref=e626]:
+                - generic [ref=e627]: ₹149
+                - generic [ref=e628]: ₹360
+              - generic [ref=e630]:
+                - generic [ref=e631]: ₹211
+                - generic [ref=e632]: "OFF"
+              - generic [ref=e634]: BAY6 White Phenyl Tough Dirt Removal Germ Fighter
+              - generic [ref=e635]: 1 pc (5 L)
+              - generic [ref=e636]:
+                - generic [ref=e637]:
+                  - img [ref=e638]
+                  - text: "4.6"
+                - generic [ref=e640]: (2.9k)
+          - link "Urbanwipe Kitchen Cleaning Spray ADD ₹199 ₹299 ₹100 OFF Urbanwipe Kitchen Cleaning Spray 1 pc (500 ml) 4.4 (363)" [ref=e642] [cursor=pointer]:
+            - /url: /pn/urbanwipe-kitchen-cleaning-spray/pvid/df009350-2c06-4625-a82c-431e7d586e23
+            - generic [ref=e643]:
+              - generic [ref=e645]:
+                - img "Urbanwipe Kitchen Cleaning Spray" [ref=e646]
+                - button "ADD" [ref=e647]
+              - generic [ref=e648]:
+                - generic [ref=e649]: ₹199
+                - generic [ref=e650]: ₹299
+              - generic [ref=e652]:
+                - generic [ref=e653]: ₹100
+                - generic [ref=e654]: "OFF"
+              - generic [ref=e656]: Urbanwipe Kitchen Cleaning Spray
+              - generic [ref=e657]: 1 pc (500 ml)
+              - generic [ref=e658]:
+                - generic [ref=e659]:
+                  - img [ref=e660]
+                  - text: "4.4"
+                - generic [ref=e662]: (363)
+        - generic [ref=e663]:
+          - generic [ref=e665]:
+            - heading "Rice" [level=4] [ref=e666]
+            - button "See All" [ref=e667] [cursor=pointer]:
+              - text: See All
+              - img [ref=e669]
+          - generic [ref=e673]:
+            - link "India Gate Jeera Rice | Short Grain ADD ₹233 ₹345 ₹112 OFF India Gate Jeera Rice | Short Grain 1 pack (1 kg) 4.8 (5.7k)" [ref=e675] [cursor=pointer]:
+              - /url: /pn/india-gate-jeera-rice-short-grain/pvid/aebefabf-6c81-409e-a4e8-2797d36b07d3
+              - generic [ref=e676]:
+                - generic [ref=e678]:
+                  - img "India Gate Jeera Rice | Short Grain" [ref=e679]
+                  - button "ADD" [ref=e680]
+                - generic [ref=e681]:
+                  - generic [ref=e682]: ₹233
+                  - generic [ref=e683]: ₹345
+                - generic [ref=e685]:
+                  - generic [ref=e686]: ₹112
+                  - generic [ref=e687]: "OFF"
+                - generic [ref=e689]: India Gate Jeera Rice | Short Grain
+                - generic [ref=e690]: 1 pack (1 kg)
+                - generic [ref=e691]:
+                  - generic [ref=e692]:
+                    - img [ref=e693]
+                    - text: "4.8"
+                  - generic [ref=e695]: (5.7k)
+            - link "Daily Good Dosa Rice ADD ₹55 ₹100 ₹45 OFF Daily Good Dosa Rice 1 pack (1 kg) 4.4 (4.4k)" [ref=e697] [cursor=pointer]:
+              - /url: /pn/daily-good-dosa-rice/pvid/66405fbd-3f90-411a-87f2-528f19aec713
+              - generic [ref=e698]:
+                - generic [ref=e700]:
+                  - img "Daily Good Dosa Rice" [ref=e701]
+                  - button "ADD" [ref=e702]
+                - generic [ref=e703]:
+                  - generic [ref=e704]: ₹55
+                  - generic [ref=e705]: ₹100
+                - generic [ref=e707]:
+                  - generic [ref=e708]: ₹45
+                  - generic [ref=e709]: "OFF"
+                - generic [ref=e711]: Daily Good Dosa Rice
+                - generic [ref=e712]: 1 pack (1 kg)
+                - generic [ref=e713]:
+                  - generic [ref=e714]:
+                    - img [ref=e715]
+                    - text: "4.4"
+                  - generic [ref=e717]: (4.4k)
+            - link "Tata Sampann High in Fibre Poha ADD ₹83 ₹115 ₹32 OFF Tata Sampann High in Fibre Poha 1 pack (1 kg) 4.7 (11.2k)" [ref=e719] [cursor=pointer]:
+              - /url: /pn/tata-sampann-high-in-fibre-poha/pvid/47402841-10fa-4cdf-9b7c-faa20e39573f
+              - generic [ref=e720]:
+                - generic [ref=e722]:
+                  - img "Tata Sampann High in Fibre Poha" [ref=e723]
+                  - button "ADD" [ref=e724]
+                - generic [ref=e725]:
+                  - generic [ref=e726]: ₹83
+                  - generic [ref=e727]: ₹115
+                - generic [ref=e729]:
+                  - generic [ref=e730]: ₹32
+                  - generic [ref=e731]: "OFF"
+                - generic [ref=e733]: Tata Sampann High in Fibre Poha
+                - generic [ref=e734]: 1 pack (1 kg)
+                - generic [ref=e735]:
+                  - generic [ref=e736]:
+                    - img [ref=e737]
+                    - text: "4.7"
+                  - generic [ref=e739]: (11.2k)
+            - link "Daily Good Idli Rice ADD ₹60 ₹100 ₹40 OFF Daily Good Idli Rice 1 pack (1 kg) 4.7 (5.5k)" [ref=e741] [cursor=pointer]:
+              - /url: /pn/daily-good-idli-rice/pvid/281ccc3f-918e-4478-b43f-cb2fb766d1c1
+              - generic [ref=e742]:
+                - generic [ref=e744]:
+                  - img "Daily Good Idli Rice" [ref=e745]
+                  - button "ADD" [ref=e746]
+                - generic [ref=e747]:
+                  - generic [ref=e748]: ₹60
+                  - generic [ref=e749]: ₹100
+                - generic [ref=e751]:
+                  - generic [ref=e752]: ₹40
+                  - generic [ref=e753]: "OFF"
+                - generic [ref=e755]: Daily Good Idli Rice
+                - generic [ref=e756]: 1 pack (1 kg)
+                - generic [ref=e757]:
+                  - generic [ref=e758]:
+                    - img [ref=e759]
+                    - text: "4.7"
+                  - generic [ref=e761]: (5.5k)
+            - link "Daily Good Tamil Ponni Boiled Rice ADD ₹78 ₹110 ₹32 OFF Daily Good Tamil Ponni Boiled Rice 1 pack (1 kg) 4.5 (7.9k)" [ref=e763] [cursor=pointer]:
+              - /url: /pn/daily-good-tamil-ponni-boiled-rice/pvid/ed6e550a-699a-452b-81e5-c4997cdcb5a1
+              - generic [ref=e764]:
+                - generic [ref=e766]:
+                  - img "Daily Good Tamil Ponni Boiled Rice" [ref=e767]
+                  - button "ADD" [ref=e768]
+                - generic [ref=e769]:
+                  - generic [ref=e770]: ₹78
+                  - generic [ref=e771]: ₹110
+                - generic [ref=e773]:
+                  - generic [ref=e774]: ₹32
+                  - generic [ref=e775]: "OFF"
+                - generic [ref=e777]: Daily Good Tamil Ponni Boiled Rice
+                - generic [ref=e778]: 1 pack (1 kg)
+                - generic [ref=e779]:
+                  - generic [ref=e780]:
+                    - img [ref=e781]
+                    - text: "4.5"
+                  - generic [ref=e783]: (7.9k)
+            - link "Daily Good Ragi / Finger Millet ADD ₹77 ₹115 ₹38 OFF Daily Good Ragi / Finger Millet 1 pack (1 kg) 4.7 (4.4k)" [ref=e785] [cursor=pointer]:
+              - /url: /pn/daily-good-ragi-finger-millet/pvid/4986080e-05b8-4e42-b796-61fe5363f823
+              - generic [ref=e786]:
+                - generic [ref=e788]:
+                  - img "Daily Good Ragi / Finger Millet" [ref=e789]
+                  - button "ADD" [ref=e790]
+                - generic [ref=e791]:
+                  - generic [ref=e792]: ₹77
+                  - generic [ref=e793]: ₹115
+                - generic [ref=e795]:
+                  - generic [ref=e796]: ₹38
+                  - generic [ref=e797]: "OFF"
+                - generic [ref=e799]: Daily Good Ragi / Finger Millet
+                - generic [ref=e800]: 1 pack (1 kg)
+                - generic [ref=e801]:
+                  - generic [ref=e802]:
+                    - img [ref=e803]
+                    - text: "4.7"
+                  - generic [ref=e805]: (4.4k)
+            - link "Daily Good Medium Poha | Avalakki | Indori Poha ADD ₹77 ₹120 ₹43 OFF Daily Good Medium Poha | Avalakki | Indori Poha 1 pack (1 kg) 4.6 (6.3k)" [ref=e807] [cursor=pointer]:
+              - /url: /pn/daily-good-medium-poha-avalakki-indori-poha/pvid/3d7d4f08-89f6-464d-8a45-2c1bf28a7227
+              - generic [ref=e808]:
+                - generic [ref=e810]:
+                  - img "Daily Good Medium Poha | Avalakki | Indori Poha" [ref=e811]
+                  - button "ADD" [ref=e812]
+                - generic [ref=e813]:
+                  - generic [ref=e814]: ₹77
+                  - generic [ref=e815]: ₹120
+                - generic [ref=e817]:
+                  - generic [ref=e818]: ₹43
+                  - generic [ref=e819]: "OFF"
+                - generic [ref=e821]: Daily Good Medium Poha | Avalakki | Indori Poha
+                - generic [ref=e822]: 1 pack (1 kg)
+                - generic [ref=e823]:
+                  - generic [ref=e824]:
+                    - img [ref=e825]
+                    - text: "4.6"
+                  - generic [ref=e827]: (6.3k)
+            - link "Daily Good Jowar | Sorghum ADD ₹84 ₹105 ₹21 OFF Daily Good Jowar | Sorghum 1 pack (1 kg) 4.6 (2.8k)" [ref=e829] [cursor=pointer]:
+              - /url: /pn/daily-good-jowar-sorghum/pvid/1beea0ac-893f-4eb0-b8e0-91b338070fe8
+              - generic [ref=e830]:
+                - generic [ref=e832]:
+                  - img "Daily Good Jowar | Sorghum" [ref=e833]
+                  - button "ADD" [ref=e834]
+                - generic [ref=e835]:
+                  - generic [ref=e836]: ₹84
+                  - generic [ref=e837]: ₹105
+                - generic [ref=e839]:
+                  - generic [ref=e840]: ₹21
+                  - generic [ref=e841]: "OFF"
+                - generic [ref=e843]: Daily Good Jowar | Sorghum
+                - generic [ref=e844]: 1 pack (1 kg)
+                - generic [ref=e845]:
+                  - generic [ref=e846]:
+                    - img [ref=e847]
+                    - text: "4.6"
+                  - generic [ref=e849]: (2.8k)
+            - link "India Gate All Rounder Feast Rozzana Basmati Rice | Aged Rice | Fluffy and Non-Sticky ADD ₹97 ₹125 ₹28 OFF India Gate All Rounder Feast Rozzana Basmati Rice | Aged Rice | Fluffy and Non-Sticky 1 pack (1 kg) 4.6 (33.7k)" [ref=e851] [cursor=pointer]:
+              - /url: /pn/india-gate-all-rounder-feast-rozzana-basmati-rice-aged-rice-fluffy-and-non-sticky/pvid/7a91e366-3ec1-410b-8d41-83d011eb3a86
+              - generic [ref=e852]:
+                - generic [ref=e854]:
+                  - img "India Gate All Rounder Feast Rozzana Basmati Rice | Aged Rice | Fluffy and Non-Sticky" [ref=e855]
+                  - button "ADD" [ref=e856]
+                - generic [ref=e857]:
+                  - generic [ref=e858]: ₹97
+                  - generic [ref=e859]: ₹125
+                - generic [ref=e861]:
+                  - generic [ref=e862]: ₹28
+                  - generic [ref=e863]: "OFF"
+                - generic [ref=e865]: India Gate All Rounder Feast Rozzana Basmati Rice | Aged Rice | Fluffy and Non-Sticky
+                - generic [ref=e866]: 1 pack (1 kg)
+                - generic [ref=e867]:
+                  - generic [ref=e868]:
+                    - img [ref=e869]
+                    - text: "4.6"
+                  - generic [ref=e871]: (33.7k)
+            - link "Daawat Rozana Super Basmati Rice | Medium Grain ADD ₹88 ₹100 ₹12 OFF Daawat Rozana Super Basmati Rice | Medium Grain 1 pack (1 kg) Medium Grain 4.3 (92.0k)" [ref=e873] [cursor=pointer]:
+              - /url: /pn/daawat-rozana-super-basmati-rice-medium-grain/pvid/6b78d070-ba4c-459c-9d4d-fe058f71d5cf
+              - generic [ref=e874]:
+                - generic [ref=e876]:
+                  - img "Daawat Rozana Super Basmati Rice | Medium Grain" [ref=e877]
+                  - button "ADD" [ref=e878]
+                - generic [ref=e879]:
+                  - generic [ref=e880]: ₹88
+                  - generic [ref=e881]: ₹100
+                - generic [ref=e883]:
+                  - generic [ref=e884]: ₹12
+                  - generic [ref=e885]: "OFF"
+                - generic [ref=e887]: Daawat Rozana Super Basmati Rice | Medium Grain
+                - generic [ref=e888]: 1 pack (1 kg)
+                - generic [ref=e890]: Medium Grain
+                - generic [ref=e891]:
+                  - generic [ref=e892]:
+                    - img [ref=e893]
+                    - text: "4.3"
+                  - generic [ref=e895]: (92.0k)
+        - generic [ref=e896]:
+          - generic [ref=e898]:
+            - heading "Hair care" [level=4] [ref=e899]
+            - button "See All" [ref=e900] [cursor=pointer]:
+              - text: See All
+              - img [ref=e902]
+          - generic [ref=e906]:
+            - link "Parachute 100 % Pure Coconut Oil ADD ₹185 ₹199 ₹14 OFF Parachute 100 % Pure Coconut Oil 1 pc (300 ml or 330 ml) Hair Fall & Thinning Dry & Frizzy Hair All Hair Types 4.7 (89.1k) Bestseller" [ref=e908] [cursor=pointer]:
+              - /url: /pn/parachute-100-pure-coconut-oil/pvid/709bd327-baf4-4104-a46d-fdba2b80b99c
+              - generic [ref=e909]:
+                - generic [ref=e911]:
+                  - img "Parachute 100 % Pure Coconut Oil" [ref=e912]
+                  - button "ADD" [ref=e913]
+                - generic [ref=e914]:
+                  - generic [ref=e915]: ₹185
+                  - generic [ref=e916]: ₹199
+                - generic [ref=e918]:
+                  - generic [ref=e919]: ₹14
+                  - generic [ref=e920]: "OFF"
+                - generic [ref=e922]: Parachute 100 % Pure Coconut Oil
+                - generic [ref=e923]: 1 pc (300 ml or 330 ml)
+                - generic [ref=e924]:
+                  - generic [ref=e925]: Hair Fall & Thinning
+                  - generic [ref=e926]: Dry & Frizzy Hair
+                  - generic [ref=e927]: All Hair Types
+                - generic [ref=e928]:
+                  - generic [ref=e929]:
+                    - img [ref=e930]
+                    - text: "4.7"
+                  - generic [ref=e932]: (89.1k)
+                - generic [ref=e933]: Bestseller
+            - link "Livon Anti-Frizz Serum | Frizz-free, Smooth Hair | with Argan Oil & Vitamin E ADD ₹22 ₹29 ₹7 OFF Livon Anti-Frizz Serum | Frizz-free, Smooth Hair | with Argan Oil & Vitamin E 1 Pack(9 ml) 4.8 (12.3k)" [ref=e935] [cursor=pointer]:
+              - /url: /pn/livon-anti-frizz-serum-frizz-free-smooth-hair-with-argan-oil-vitamin-e/pvid/c41c8a9f-f8d7-4aa0-b5bb-39a8905d50bf
+              - generic [ref=e936]:
+                - generic [ref=e938]:
+                  - img "Livon Anti-Frizz Serum | Frizz-free, Smooth Hair | with Argan Oil & Vitamin E" [ref=e939]
+                  - button "ADD" [ref=e940]
+                - generic [ref=e941]:
+                  - generic [ref=e942]: ₹22
+                  - generic [ref=e943]: ₹29
+                - generic [ref=e945]:
+                  - generic [ref=e946]: ₹7
+                  - generic [ref=e947]: "OFF"
+                - generic [ref=e949]: Livon Anti-Frizz Serum | Frizz-free, Smooth Hair | with Argan Oil & Vitamin E
+                - generic [ref=e950]: 1 Pack(9 ml)
+                - generic [ref=e951]:
+                  - generic [ref=e952]:
+                    - img [ref=e953]
+                    - text: "4.8"
+                  - generic [ref=e955]: (12.3k)
+            - link "Pantene Miracle Rescue Biotin Strength Conditioner ADD ₹115 Pantene Miracle Rescue Biotin Strength Conditioner 1 pc (80 ml) 4.6 (1.9k)" [ref=e957] [cursor=pointer]:
+              - /url: /pn/pantene-miracle-rescue-biotin-strength-conditioner/pvid/eceb352e-eeb6-490f-88a2-eec4c78ff3ea
+              - generic [ref=e958]:
+                - generic [ref=e960]:
+                  - img "Pantene Miracle Rescue Biotin Strength Conditioner" [ref=e961]
+                  - button "ADD" [ref=e962]
+                - generic [ref=e964]: ₹115
+                - generic [ref=e965]: Pantene Miracle Rescue Biotin Strength Conditioner
+                - generic [ref=e966]: 1 pc (80 ml)
+                - generic [ref=e967]:
+                  - generic [ref=e968]:
+                    - img [ref=e969]
+                    - text: "4.6"
+                  - generic [ref=e971]: (1.9k)
+            - link "Dove Deep Repair Treatment Hair Mask For Damaged Hair ADD ₹182 ₹249 ₹67 OFF Dove Deep Repair Treatment Hair Mask For Damaged Hair 1 pc (120 ml) 4.7 (5.4k)" [ref=e973] [cursor=pointer]:
+              - /url: /pn/dove-deep-repair-treatment-hair-mask-for-damaged-hair/pvid/91a2dd44-c836-4c11-a863-67b4ae66298a
+              - generic [ref=e974]:
+                - generic [ref=e976]:
+                  - img "Dove Deep Repair Treatment Hair Mask For Damaged Hair" [ref=e977]
+                  - button "ADD" [ref=e978]
+                - generic [ref=e979]:
+                  - generic [ref=e980]: ₹182
+                  - generic [ref=e981]: ₹249
+                - generic [ref=e983]:
+                  - generic [ref=e984]: ₹67
+                  - generic [ref=e985]: "OFF"
+                - generic [ref=e987]: Dove Deep Repair Treatment Hair Mask For Damaged Hair
+                - generic [ref=e988]: 1 pc (120 ml)
+                - generic [ref=e989]:
+                  - generic [ref=e990]:
+                    - img [ref=e991]
+                    - text: "4.7"
+                  - generic [ref=e993]: (5.4k)
+            - link "Parachute Advansed Men Hair Cream, Anti-Dandruff ADD ₹80 ₹100 ₹20 OFF Parachute Advansed Men Hair Cream, Anti-Dandruff 1 pc (100 g) 4.6 (6.1k)" [ref=e995] [cursor=pointer]:
+              - /url: /pn/parachute-advansed-men-hair-cream-anti-dandruff/pvid/5f600e6d-ea2d-47a5-9a80-b97ee103ef6d
+              - generic [ref=e996]:
+                - generic [ref=e998]:
+                  - img "Parachute Advansed Men Hair Cream, Anti-Dandruff" [ref=e999]
+                  - button "ADD" [ref=e1000]
+                - generic [ref=e1001]:
+                  - generic [ref=e1002]: ₹80
+                  - generic [ref=e1003]: ₹100
+                - generic [ref=e1005]:
+                  - generic [ref=e1006]: ₹20
+                  - generic [ref=e1007]: "OFF"
+                - generic [ref=e1009]: Parachute Advansed Men Hair Cream, Anti-Dandruff
+                - generic [ref=e1010]: 1 pc (100 g)
+                - generic [ref=e1011]:
+                  - generic [ref=e1012]:
+                    - img [ref=e1013]
+                    - text: "4.6"
+                  - generic [ref=e1015]: (6.1k)
+            - link "Livon Serum For Frizz-Free Smooth Hair With Argan Oil & Vitamin E ADD ₹153 ₹180 ₹27 OFF Livon Serum For Frizz-Free Smooth Hair With Argan Oil & Vitamin E 1 pc (50 ml) 4.7 (7.2k)" [ref=e1017] [cursor=pointer]:
+              - /url: /pn/livon-serum-for-frizz-free-smooth-hair-with-argan-oil-vitamin-e/pvid/bf4af905-050d-4878-be6d-d2ff195b3e1b
+              - generic [ref=e1018]:
+                - generic [ref=e1020]:
+                  - img "Livon Serum For Frizz-Free Smooth Hair With Argan Oil & Vitamin E" [ref=e1021]
+                  - button "ADD" [ref=e1022]
+                - generic [ref=e1023]:
+                  - generic [ref=e1024]: ₹153
+                  - generic [ref=e1025]: ₹180
+                - generic [ref=e1027]:
+                  - generic [ref=e1028]: ₹27
+                  - generic [ref=e1029]: "OFF"
+                - generic [ref=e1031]: Livon Serum For Frizz-Free Smooth Hair With Argan Oil & Vitamin E
+                - generic [ref=e1032]: 1 pc (50 ml)
+                - generic [ref=e1033]:
+                  - generic [ref=e1034]:
+                    - img [ref=e1035]
+                    - text: "4.7"
+                  - generic [ref=e1037]: (7.2k)
+            - link "Set Wet Hair Gel for Men Cool Hold Medium Hold Tube ADD ₹82 ₹100 ₹18 OFF Set Wet Hair Gel for Men Cool Hold Medium Hold Tube 1 pc (100 ml) 4.6 (2.2k)" [ref=e1039] [cursor=pointer]:
+              - /url: /pn/set-wet-hair-gel-for-men-cool-hold-medium-hold-tube/pvid/16142d2a-55f8-42fc-82ab-5364cb56bf9e
+              - generic [ref=e1040]:
+                - generic [ref=e1042]:
+                  - img "Set Wet Hair Gel for Men Cool Hold Medium Hold Tube" [ref=e1043]
+                  - button "ADD" [ref=e1044]
+                - generic [ref=e1045]:
+                  - generic [ref=e1046]: ₹82
+                  - generic [ref=e1047]: ₹100
+                - generic [ref=e1049]:
+                  - generic [ref=e1050]: ₹18
+                  - generic [ref=e1051]: "OFF"
+                - generic [ref=e1053]: Set Wet Hair Gel for Men Cool Hold Medium Hold Tube
+                - generic [ref=e1054]: 1 pc (100 ml)
+                - generic [ref=e1055]:
+                  - generic [ref=e1056]:
+                    - img [ref=e1057]
+                    - text: "4.6"
+                  - generic [ref=e1059]: (2.2k)
+            - link "Bare Anatomy Rosemary Water Spray for Hair Growth, Thickness & Hairfall Control, 100% Natural ADD ₹367 ₹399 ₹32 OFF Bare Anatomy Rosemary Water Spray for Hair Growth, Thickness & Hairfall Control, 100% Natural 1 pc (200 ml) 4.9 (943)" [ref=e1061] [cursor=pointer]:
+              - /url: /pn/bare-anatomy-rosemary-water-spray-for-hair-growth-thickness-hairfall-control-100-natural/pvid/89655d54-6d10-4d40-b807-8f1b6f69124a
+              - generic [ref=e1062]:
+                - generic [ref=e1064]:
+                  - img "Bare Anatomy Rosemary Water Spray for Hair Growth, Thickness & Hairfall Control, 100% Natural" [ref=e1065]
+                  - button "ADD" [ref=e1066]
+                - generic [ref=e1067]:
+                  - generic [ref=e1068]: ₹367
+                  - generic [ref=e1069]: ₹399
+                - generic [ref=e1071]:
+                  - generic [ref=e1072]: ₹32
+                  - generic [ref=e1073]: "OFF"
+                - generic [ref=e1075]: Bare Anatomy Rosemary Water Spray for Hair Growth, Thickness & Hairfall Control, 100% Natural
+                - generic [ref=e1076]: 1 pc (200 ml)
+                - generic [ref=e1077]:
+                  - generic [ref=e1078]:
+                    - img [ref=e1079]
+                    - text: "4.9"
+                  - generic [ref=e1081]: (943)
+            - link "Dove Intense Repair Conditioner ADD ₹235 ₹313 ₹78 OFF Dove Intense Repair Conditioner 1 pc (175 ml) 4.7 (5.3k)" [ref=e1083] [cursor=pointer]:
+              - /url: /pn/dove-intense-repair-conditioner/pvid/98f2c3f0-069f-4ff4-b36e-6338d4c6b292
+              - generic [ref=e1084]:
+                - generic [ref=e1086]:
+                  - img "Dove Intense Repair Conditioner" [ref=e1087]
+                  - button "ADD" [ref=e1088]
+                - generic [ref=e1089]:
+                  - generic [ref=e1090]: ₹235
+                  - generic [ref=e1091]: ₹313
+                - generic [ref=e1093]:
+                  - generic [ref=e1094]: ₹78
+                  - generic [ref=e1095]: "OFF"
+                - generic [ref=e1097]: Dove Intense Repair Conditioner
+                - generic [ref=e1098]: 1 pc (175 ml)
+                - generic [ref=e1099]:
+                  - generic [ref=e1100]:
+                    - img [ref=e1101]
+                    - text: "4.7"
+                  - generic [ref=e1103]: (5.3k)
+            - link "Bajaj Almond Drops Hair Oil with 2x Hairfall Reduction and 6x Vitamin E & Almond Oil ADD ₹87 Bajaj Almond Drops Hair Oil with 2x Hairfall Reduction and 6x Vitamin E & Almond Oil 1 pc (95 ml) Hair Fall & Thinning Damaged Hair All Hair Types Dullness / Shine 4.6 (9.2k)" [ref=e1105] [cursor=pointer]:
+              - /url: /pn/bajaj-almond-drops-hair-oil-with-2x-hairfall-reduction-and-6x-vitamin-e-almond-oil/pvid/dda23420-9198-418f-830c-9cdeb812a5c2
+              - generic [ref=e1106]:
+                - generic [ref=e1108]:
+                  - img "Bajaj Almond Drops Hair Oil with 2x Hairfall Reduction and 6x Vitamin E & Almond Oil" [ref=e1109]
+                  - button "ADD" [ref=e1110]
+                - generic [ref=e1112]: ₹87
+                - generic [ref=e1113]: Bajaj Almond Drops Hair Oil with 2x Hairfall Reduction and 6x Vitamin E & Almond Oil
+                - generic [ref=e1114]: 1 pc (95 ml)
+                - generic [ref=e1115]:
+                  - generic [ref=e1116]: Hair Fall & Thinning
+                  - generic [ref=e1117]: Damaged Hair
+                  - generic [ref=e1118]: All Hair Types
+                  - generic [ref=e1119]: Dullness / Shine
+                - generic [ref=e1120]:
+                  - generic [ref=e1121]:
+                    - img [ref=e1122]
+                    - text: "4.6"
+                  - generic [ref=e1124]: (9.2k)
+      - contentinfo [ref=e1126]:
+        - generic [ref=e1127]:
+          - generic [ref=e1128]:
+            - heading "How it Works" [level=2] [ref=e1129]
+            - generic [ref=e1130]:
+              - generic [ref=e1132]:
+                - heading "Open the app" [level=3] [ref=e1133]
+                - paragraph [ref=e1134]: Choose from over 7000 products across groceries, fresh fruits & veggies, meat, pet care, beauty items & more
+              - generic [ref=e1136]:
+                - heading "Place an order" [level=3] [ref=e1137]
+                - paragraph [ref=e1138]: Add your favourite items to the cart & avail the best offers
+              - generic [ref=e1140]:
+                - heading "Get free delivery" [level=3] [ref=e1141]
+                - paragraph [ref=e1142]: Experience lighting-fast speed & get all your items delivered in minutes
+          - generic [ref=e1145]:
+            - heading "Trending Searches" [level=3] [ref=e1146]
+            - generic [ref=e1147]:
+              - generic [ref=e1148]:
+                - heading "Categories" [level=4] [ref=e1149]
+                - generic [ref=e1150]: ":"
+                - list [ref=e1151]:
+                  - listitem [ref=e1152]:
+                    - link "Ice Creams" [ref=e1153] [cursor=pointer]:
+                      - /url: https://www.zepto.com/cn/ice-creams-more/ice-creams/cid/c5550221-3ad4-40e4-a14f-5275cef37781/scid/03ec68f8-13cf-4eed-b72c-9de5fb0d0b62
+                    - text: "|"
+                  - listitem [ref=e1154]:
+                    - link "Sunscreen" [ref=e1155] [cursor=pointer]:
+                      - /url: https://www.zepto.com/cn/skincare/sunscreen/cid/832a6b8e-db10-42a6-b892-d745853da2e9/scid/cca08a53-6a68-4fbf-b882-d2d7fb076261
+                    - text: "|"
+                  - listitem [ref=e1156]:
+                    - link "Ice Cream Cake" [ref=e1157] [cursor=pointer]:
+                      - /url: https://www.zepto.com/cn/ice-creams-more/icream-cakes/cid/5c6e61c4-15a2-41ec-a986-553f83f37a7d/scid/ded4ffe6-0bce-4a42-98d2-3064c760d093
+                    - text: "|"
+                  - listitem [ref=e1158]:
+                    - link "Cold Beverages" [ref=e1159] [cursor=pointer]:
+                      - /url: https://www.zepto.com/cn/zepto-cafe/cold-beverages/cid/dfe16918-81b1-49c3-941b-acd557f7c277/scid/3d5cbea7-bbf8-4c22-b1cc-3044d8cdee42
+                    - text: "|"
+                  - listitem [ref=e1160]:
+                    - link "Oats" [ref=e1161] [cursor=pointer]:
+                      - /url: https://www.zepto.com/cn/breakfast-sauces/muesli-oats/cid/f804bccc-c565-4879-b6ab-1b964bb1ed41/scid/dafa5c98-3367-4624-90a4-0a2af6e695c3
+                    - text: "|"
+                  - listitem [ref=e1162]:
+                    - link "Card and Board Games" [ref=e1163] [cursor=pointer]:
+                      - /url: https://www.zepto.com/cn/toys-sports/card-board-games/cid/fd1438dc-e1a8-49f9-87a3-2645a613ceeb/scid/18ba4052-e951-4d8f-917b-8827f9e47398
+                    - text: "|"
+                  - listitem [ref=e1164]:
+                    - link "Baby Shampoo" [ref=e1165] [cursor=pointer]:
+                      - /url: https://www.zepto.com/cn/baby-care/baby-bath/cid/0118c4f5-750c-4929-a734-b4ef454e265b/scid/656132b1-c0cd-44ae-afb2-62d3fe3d70fd
+                    - text: "|"
+                  - listitem [ref=e1166]:
+                    - link "Yoga Mats" [ref=e1167] [cursor=pointer]:
+                      - /url: https://www.zepto.com/buy-yoga-mat
+              - generic [ref=e1168]:
+                - heading "Products" [level=4] [ref=e1169]
+                - generic [ref=e1170]: ":"
+                - list [ref=e1171]:
+                  - listitem [ref=e1172]:
+                    - link "OnePlus 13R" [ref=e1173] [cursor=pointer]:
+                      - /url: https://www.zepto.com/pn/oneplus-13r-12gb-256gb-astral-trail/pvid/043d54ac-545c-4f73-91ce-f0d171462570
+                    - text: "|"
+                  - listitem [ref=e1174]:
+                    - link "Wellcore Creatine Tango" [ref=e1175] [cursor=pointer]:
+                      - /url: https://www.zepto.com/pn/wellcore-micronised-tropical-tango-creatine-monohydrate-33-servings/pvid/aad60fd4-b197-4a5a-a407-70700a95a704
+                    - text: "|"
+                  - listitem [ref=e1176]:
+                    - link "Nothing Phone 3a Lite" [ref=e1177] [cursor=pointer]:
+                      - /url: https://www.zepto.com/pn/nothing-phone-3a-lite-black-128gb-8gb-ram/pvid/cc210219-9dab-4cd6-910f-4ba658c6048e
+                    - text: "|"
+                  - listitem [ref=e1178]:
+                    - link "Litchi" [ref=e1179] [cursor=pointer]:
+                      - /url: https://www.zepto.com/pn/litchi-muzaffarpur-without-stems-leaves/pvid/0f17b797-0faf-4fbb-bc04-8681b42f955b
+                    - text: "|"
+                  - listitem [ref=e1180]:
+                    - link "iPhone cover" [ref=e1181] [cursor=pointer]:
+                      - /url: https://www.zepto.com/cn/electronics-appliances/mobile-accessories/cid/966dc8a0-8f21-420e-a897-8dd70b4228f6/scid/5a14eb17-b896-4a5c-b4ae-b3d7f4d61acd
+                    - text: "|"
+                  - listitem [ref=e1182]:
+                    - link "Coconut Water" [ref=e1183] [cursor=pointer]:
+                      - /url: https://www.zepto.com/pn/tender-coconut/pvid/b9fbf0e7-de2d-4a89-ae74-b12a7c0ab236
+                    - text: "|"
+                  - listitem [ref=e1184]:
+                    - link "Diet Coke" [ref=e1185] [cursor=pointer]:
+                      - /url: https://www.zepto.com/pn/coca-cola-diet-coke-soft-drink-can-low-calorie-fizzy/pvid/26d064b9-25df-44a4-811b-cba9146cfd3b
+                    - text: "|"
+                  - listitem [ref=e1186]:
+                    - link "Hocco Aamchi Ice Cream" [ref=e1187] [cursor=pointer]:
+                      - /url: https://www.zepto.com/pn/hocco-ice-creams-aamchi/pvid/edd72d26-4c02-4491-90ad-5d27003888cd
+              - generic [ref=e1188]:
+                - heading "Brands" [level=4] [ref=e1189]
+                - generic [ref=e1190]: ":"
+                - list [ref=e1191]:
+                  - listitem [ref=e1192]:
+                    - link "Ob & Gob" [ref=e1193] [cursor=pointer]:
+                      - /url: https://www.zepto.com/brand/OB_&_GOB/0cb1c204-19a0-4802-8325-583717a30ad5
+                    - text: "|"
+                  - listitem [ref=e1194]:
+                    - link "Frido Pillow" [ref=e1195] [cursor=pointer]:
+                      - /url: https://www.zepto.com/brand/Frido/ec052076-1991-45a7-86c9-2220434eec96
+                    - text: "|"
+                  - listitem [ref=e1196]:
+                    - link "Dermi Cool" [ref=e1197] [cursor=pointer]:
+                      - /url: https://www.zepto.com/brand/Dermi_cool/f7fdd3da-b303-437b-948f-4244eb574cb3
+                    - text: "|"
+                  - listitem [ref=e1198]:
+                    - link "Decathlon" [ref=e1199] [cursor=pointer]:
+                      - /url: https://www.zepto.com/brand/Decathlon/101978de-5398-4d05-af92-ddc382063147
+            - heading "Popular Searches" [level=3] [ref=e1200]
+            - generic [ref=e1201]:
+              - generic [ref=e1202]:
+                - heading "Products" [level=4] [ref=e1203]
+                - generic [ref=e1204]: ":"
+                - list [ref=e1205]:
+                  - listitem [ref=e1206]:
+                    - link "Avocado" [ref=e1207] [cursor=pointer]:
+                      - /url: /pn/avocado-indian-premium-semi-ripe/pvid/10a847f5-b72b-42b8-b1b7-619a26bccf90
+                    - text: "|"
+                  - listitem [ref=e1208]:
+                    - link "Strawberry" [ref=e1209] [cursor=pointer]:
+                      - /url: /pn/strawberry-mahabaleshwar/pvid/d0a3ad74-8c00-4b37-bd4c-d87cef26714e
+                    - text: "|"
+                  - listitem [ref=e1210]:
+                    - link "Pomegranate" [ref=e1211] [cursor=pointer]:
+                      - /url: /pn/pomegranate/pvid/085b06eb-cf40-4922-acee-ad29826410f5
+                    - text: "|"
+                  - listitem [ref=e1212]:
+                    - link "Beetroot" [ref=e1213] [cursor=pointer]:
+                      - /url: /pn/beetroot/pvid/02276424-5793-4830-aefa-4ba54145e0e3
+                    - text: "|"
+                  - listitem [ref=e1214]:
+                    - link "Ash gourd" [ref=e1215] [cursor=pointer]:
+                      - /url: /pn/ash-gourd/pvid/aa891942-3ce5-437e-bb11-0120ae085874
+                    - text: "|"
+                  - listitem [ref=e1216]:
+                    - link "Bottle gourd" [ref=e1217] [cursor=pointer]:
+                      - /url: /pn/bottle-gourd/pvid/21dd96c3-e916-49e1-a194-9cc4d528b208
+                    - text: "|"
+                  - listitem [ref=e1218]:
+                    - link "Lady finger" [ref=e1219] [cursor=pointer]:
+                      - /url: /pn/lady-finger/pvid/371ecce2-6bd6-4042-b6ca-bc8a425e7b36
+                    - text: "|"
+                  - listitem [ref=e1220]:
+                    - link "Potato" [ref=e1221] [cursor=pointer]:
+                      - /url: /pn/fresh-potato/pvid/a8043677-61c7-4af4-b784-b6aa225306a4
+                    - text: "|"
+                  - listitem [ref=e1222]:
+                    - link "Lemon" [ref=e1223] [cursor=pointer]:
+                      - /url: /pn/lemon/pvid/0d043da8-bd98-456e-b424-d5312993f188
+                    - text: "|"
+                  - listitem [ref=e1224]:
+                    - link "Dalchini" [ref=e1225] [cursor=pointer]:
+                      - /url: /pn/popular-essentials-cinnamon-whole-dalchini/pvid/70b6574c-77b3-4715-a370-8bba207c0f4a
+                    - text: "|"
+                  - listitem [ref=e1226]:
+                    - link "Fennel seeds" [ref=e1227] [cursor=pointer]:
+                      - /url: /pn/popular-essentials-saunffennel-seeds/pvid/870056e6-aad4-43e6-8e38-e757dc2b028c
+                    - text: "|"
+                  - listitem [ref=e1228]:
+                    - link "Blueberry" [ref=e1229] [cursor=pointer]:
+                      - /url: /pn/blueberry/pvid/b7d27beb-b7da-4caa-b7a3-4e520062d9c7
+                    - text: "|"
+                  - listitem [ref=e1230]:
+                    - link "Papaya" [ref=e1231] [cursor=pointer]:
+                      - /url: /pn/papaya/pvid/9d6ab15c-70e5-410f-9d4b-82be81494244
+                    - text: "|"
+                  - listitem [ref=e1232]:
+                    - link "Jeera" [ref=e1233] [cursor=pointer]:
+                      - /url: /pn/daily-good-jeera-cumin/pvid/7a3dd73e-256d-44c3-b630-d2b48f41986e
+                    - text: "|"
+                  - listitem [ref=e1234]:
+                    - link "Mushroom" [ref=e1235] [cursor=pointer]:
+                      - /url: /pn/mushroom-button/pvid/178b3f0f-c01d-4065-8f5c-d1902cbb5d51
+                    - text: "|"
+                  - listitem [ref=e1236]:
+                    - link "Lettuce" [ref=e1237] [cursor=pointer]:
+                      - /url: /pn/lettuce-iceberg/pvid/370bf2eb-11a9-40cb-915a-998162d73593
+              - generic [ref=e1238]:
+                - heading "Brands" [level=4] [ref=e1239]
+                - generic [ref=e1240]: ":"
+                - list [ref=e1241]:
+                  - listitem [ref=e1242]:
+                    - link "Yakult" [ref=e1243] [cursor=pointer]:
+                      - /url: /brand/Yakult/c17eb160-a431-49e9-b7f8-42818835e80e
+                    - text: "|"
+                  - listitem [ref=e1244]:
+                    - link "My Muse" [ref=e1245] [cursor=pointer]:
+                      - /url: /brand/My_Muse/84dd0561-4a04-497f-bb5d-79a04c8dd7e3
+                    - text: "|"
+                  - listitem [ref=e1246]:
+                    - link "Aashirvaad Atta" [ref=e1247] [cursor=pointer]:
+                      - /url: /brand/Aashirvaad/963b50ed-3146-4744-8f4d-56876fdc8159
+                    - text: "|"
+                  - listitem [ref=e1248]:
+                    - link "Too Yumm" [ref=e1249] [cursor=pointer]:
+                      - /url: /brand/Too_yumm!/56977b67-f3de-4692-9cc1-ff897a1cd4e8
+                    - text: "|"
+                  - listitem [ref=e1250]:
+                    - link "Lays" [ref=e1251] [cursor=pointer]:
+                      - /url: /brand/Lay's/18d6cb72-65aa-4881-8984-a08aa295dd35
+                    - text: "|"
+                  - listitem [ref=e1252]:
+                    - link "Figaro Olive Oil" [ref=e1253] [cursor=pointer]:
+                      - /url: /brand/Figaro/85afa81c-2717-4ec9-af1b-f9ce76a2ccc2
+                    - text: "|"
+                  - listitem [ref=e1254]:
+                    - link "Nandini Milk" [ref=e1255] [cursor=pointer]:
+                      - /url: /brand/Nandini
+                    - text: "|"
+                  - listitem [ref=e1256]:
+                    - link "Amul" [ref=e1257] [cursor=pointer]:
+                      - /url: /brand/Amul/b27a7a24-66c5-495d-9fc0-ee6459536bb9
+                    - text: "|"
+                  - listitem [ref=e1258]:
+                    - link "Mother Dairy Near Me" [ref=e1259] [cursor=pointer]:
+                      - /url: /brand/Mother_dairy/eae3cecb-d310-4f17-86e4-d8dde4e90b9a
+                    - text: "|"
+                  - listitem [ref=e1260]:
+                    - link "Fortune Oil" [ref=e1261] [cursor=pointer]:
+                      - /url: /brand/Fortune/5febb0ec-167f-4ad7-b915-a452af31377f
+                    - text: "|"
+                  - listitem [ref=e1262]:
+                    - link "Superyou" [ref=e1263] [cursor=pointer]:
+                      - /url: /brand/Superyou/d2978607-a007-43a5-9fd1-eea766bed7e3
+                    - text: "|"
+                  - listitem [ref=e1264]:
+                    - link "Durex Condoms" [ref=e1265] [cursor=pointer]:
+                      - /url: /brand/Durex/6f57069d-e21d-4438-a56c-5636424de903
+                    - text: "|"
+                  - listitem [ref=e1266]:
+                    - link "Ferns and Petals" [ref=e1267] [cursor=pointer]:
+                      - /url: /brand/FNP/51c9c5b7-d531-48b8-a353-9fd3b899a140
+              - generic [ref=e1268]:
+                - heading "Categories" [level=4] [ref=e1269]
+                - generic [ref=e1270]: ":"
+                - list [ref=e1271]:
+                  - listitem [ref=e1272]:
+                    - link "Grocery" [ref=e1273] [cursor=pointer]:
+                      - /url: /cn/fruits-vegetables/fruits-vegetables/cid/64374cfe-d06f-4a01-898e-c07c46462c36/scid/e78a8422-5f20-4e4b-9a9f-22a0e53962e3
+                    - text: "|"
+                  - listitem [ref=e1274]:
+                    - link "Cigarettes" [ref=e1275] [cursor=pointer]:
+                      - /url: /cn/paan-corner/cigarettes/cid/cd50825e-baf8-47fe-9abc-ed9556122a9a/scid/5bcbee47-7c83-4279-80f0-7ecc068496df
+                    - text: "|"
+                  - listitem [ref=e1276]:
+                    - link "Chips" [ref=e1277] [cursor=pointer]:
+                      - /url: /cn/munchies/chips-crisps/cid/d2c2a144-43cd-43e5-b308-92628fa68596/scid/df4f5100-c02f-4906-83b8-ddb744081a7a
+                    - text: "|"
+                  - listitem [ref=e1278]:
+                    - link "Curd" [ref=e1279] [cursor=pointer]:
+                      - /url: /cn/dairy-bread-eggs/yogurts-dahi/cid/4b938e02-7bde-4479-bc0a-2b54cb6bd5f5/scid/4e975d7a-b3f9-4958-99e9-cd96cb7e7b0b
+                    - text: "|"
+                  - listitem [ref=e1280]:
+                    - link "Hukka flavour" [ref=e1281] [cursor=pointer]:
+                      - /url: /cn/paan-corner/hookah-needs/cid/cd50825e-baf8-47fe-9abc-ed9556122a9a/scid/30ff2f8f-2a98-43c9-b34b-d1463a6398ce
+                    - text: "|"
+                  - listitem [ref=e1282]:
+                    - link "Paan shop near me" [ref=e1283] [cursor=pointer]:
+                      - /url: /cn/paan-corner/cigarettes/cid/cd50825e-baf8-47fe-9abc-ed9556122a9a/scid/5bcbee47-7c83-4279-80f0-7ecc068496df
+                    - text: "|"
+                  - listitem [ref=e1284]:
+                    - link "Eggs price" [ref=e1285] [cursor=pointer]:
+                      - /url: /cn/dairy-bread-eggs/eggs/cid/4b938e02-7bde-4479-bc0a-2b54cb6bd5f5/scid/d638f064-e7f3-4161-b692-a3f472c64020
+                    - text: "|"
+                  - listitem [ref=e1286]:
+                    - link "Cheese slice" [ref=e1287] [cursor=pointer]:
+                      - /url: /cn/dairy-bread-eggs/cheese/cid/4b938e02-7bde-4479-bc0a-2b54cb6bd5f5/scid/f594b28a-4775-48ac-8840-b9030229ff87
+                    - text: "|"
+                  - listitem [ref=e1288]:
+                    - link "Fresh fruits" [ref=e1289] [cursor=pointer]:
+                      - /url: /cn/fruits-vegetables/fresh-fruits/cid/64374cfe-d06f-4a01-898e-c07c46462c36/scid/09e63c15-e5f7-4712-9ff8-513250b79942
+                    - text: "|"
+                  - listitem [ref=e1290]:
+                    - link "Fresh vegetables" [ref=e1291] [cursor=pointer]:
+                      - /url: /cn/fruits-vegetables/fresh-vegetables/cid/64374cfe-d06f-4a01-898e-c07c46462c36/scid/b4827798-fcb6-4520-ba5b-0f2bd9bd7208
+                    - text: "|"
+                  - listitem [ref=e1292]:
+                    - link "Refined oil" [ref=e1293] [cursor=pointer]:
+                      - /url: /cn/atta-rice-oil-dals/oil/cid/2f7190d0-7c40-458b-b450-9a1006db3d95/scid/2b5e863c-9497-46ae-a7e9-85f6ef7380da
+                    - text: "|"
+                  - listitem [ref=e1294]:
+                    - link "Butter price" [ref=e1295] [cursor=pointer]:
+                      - /url: /cn/dairy-bread-eggs/butter/cid/4b938e02-7bde-4479-bc0a-2b54cb6bd5f5/scid/62b2b1eb-cd07-41b2-b567-cc878d2287fc
+                    - text: "|"
+                  - listitem [ref=e1296]:
+                    - link "Paneer price" [ref=e1297] [cursor=pointer]:
+                      - /url: /cn/dairy-bread-eggs/paneer-cream/cid/4b938e02-7bde-4479-bc0a-2b54cb6bd5f5/scid/1806412f-190a-46b1-be42-4237a4146eb1
+            - heading "Categories" [level=3] [ref=e1298]
+            - list [ref=e1300]:
+              - listitem [ref=e1301]:
+                - link "Fruits & Vegetables" [ref=e1302] [cursor=pointer]:
+                  - /url: /category/fruits-vegetables
+                  - paragraph [ref=e1303]: Fruits & Vegetables
+              - listitem [ref=e1304]:
+                - link "Atta, Rice, Oil & Dals" [ref=e1305] [cursor=pointer]:
+                  - /url: /category/atta-rice-oil-dals
+                  - paragraph [ref=e1306]: Atta, Rice, Oil & Dals
+              - listitem [ref=e1307]:
+                - link "Masala & Dry Fruits" [ref=e1308] [cursor=pointer]:
+                  - /url: /cn/masala-dry-fruits-more/top-picks/cid/0c2ccf87-e32c-4438-9560-8d9488fc73e0/scid/8b44cef2-1bab-407e-aadd-29254e6778fa
+                  - paragraph [ref=e1309]: Masala & Dry Fruits
+              - listitem [ref=e1310]:
+                - link "Sweet Cravings" [ref=e1311] [cursor=pointer]:
+                  - /url: /cn/sweet-cravings/top-picks/cid/adab2f81-7140-4fe9-b8cf-3d809f40e38a/scid/002a4a04-fbc0-4fd9-a259-eb95158f8067
+                  - paragraph [ref=e1312]: Sweet Cravings
+              - listitem [ref=e1313]:
+                - link "Frozen Food & Ice Creams" [ref=e1314] [cursor=pointer]:
+                  - /url: /cn/frozen-food-ice-creams/top-picks/cid/aae1447d-1403-4a5c-a65f-bcb3afb93b5e/scid/98beb18c-0205-4267-9a30-7a749bec1b63
+                  - paragraph [ref=e1315]: Frozen Food & Ice Creams
+              - listitem [ref=e1316]:
+                - link "Baby Food" [ref=e1317] [cursor=pointer]:
+                  - /url: /cn/packaged-food/baby-food/cid/5736ad99-f589-4d58-a24b-a12222320a37/scid/5eef200f-d318-4dad-90bd-ccc579d165f3
+                  - paragraph [ref=e1318]: Baby Food
+              - listitem [ref=e1319]:
+                - link "Dairy, Bread & Eggs" [ref=e1320] [cursor=pointer]:
+                  - /url: /category/dairy-bread-eggs
+                  - paragraph [ref=e1321]: Dairy, Bread & Eggs
+              - listitem [ref=e1322]:
+                - link "Cold Drinks & Juices" [ref=e1323] [cursor=pointer]:
+                  - /url: /category/cold-drinks-juices
+                  - paragraph [ref=e1324]: Cold Drinks & Juices
+              - listitem [ref=e1325]:
+                - link "Snacks" [ref=e1326] [cursor=pointer]:
+                  - /url: /cn/snacks/top-picks/cid/d2c2a144-43cd-43e5-b308-92628fa68596/scid/d648ea7c-18f0-4178-a202-4751811b086b
+                  - paragraph [ref=e1327]: Snacks
+              - listitem [ref=e1328]:
+                - link "Meats, Fish & Eggs" [ref=e1329] [cursor=pointer]:
+                  - /url: /category/meats-fish-eggs
+                  - paragraph [ref=e1330]: Meats, Fish & Eggs
+              - listitem [ref=e1331]:
+                - link "Breakfast & Sauces" [ref=e1332] [cursor=pointer]:
+                  - /url: /cn/breakfast-sauces/top-picks/cid/f804bccc-c565-4879-b6ab-1b964bb1ed41/scid/68922181-4e0e-4a6b-9862-cf1a02ba240e
+                  - paragraph [ref=e1333]: Breakfast & Sauces
+              - listitem [ref=e1334]:
+                - link "Tea, Coffee & More" [ref=e1335] [cursor=pointer]:
+                  - /url: /cn/tea-coffee-more/top-picks/cid/d7e98d87-6850-4cf9-a37c-e4fa34ae302c/scid/e6763c2d-0bf3-4332-82e4-0c8df1c94cad
+                  - paragraph [ref=e1336]: Tea, Coffee & More
+              - listitem [ref=e1337]:
+                - link "Biscuits" [ref=e1338] [cursor=pointer]:
+                  - /url: /category/biscuits
+                  - paragraph [ref=e1339]: Biscuits
+              - listitem [ref=e1340]:
+                - link "Makeup & Beauty" [ref=e1341] [cursor=pointer]:
+                  - /url: /cn/makeup-beauty/top-picks/cid/2e5eae34-1666-4ddc-8903-76e6547f72e4/scid/e64390a2-eaaa-4f23-b1a6-422df5e2af60
+                  - paragraph [ref=e1342]: Makeup & Beauty
+              - listitem [ref=e1343]:
+                - link "Bath & Body" [ref=e1344] [cursor=pointer]:
+                  - /url: /cn/bath-body/shampoo-conditioner/cid/26e64367-19ad-4f80-a763-42599d4215ee/scid/cbc00f48-d856-4900-ad3e-859f332f199b
+                  - paragraph [ref=e1345]: Bath & Body
+              - listitem [ref=e1346]:
+                - link "Cleaning Essentials" [ref=e1347] [cursor=pointer]:
+                  - /url: /cn/cleaning-essentials/liquid-detergents-additives/cid/1a7e46a8-e627-450f-8960-490b550eeee6/scid/dfb37880-b40f-4783-9502-a56e12edbabc
+                  - paragraph [ref=e1348]: Cleaning Essentials
+              - listitem [ref=e1349]:
+                - link "Home Needs" [ref=e1350] [cursor=pointer]:
+                  - /url: /cn/home-needs/top-picks/cid/ac7b3ee1-98cb-48b8-8c62-27f47b4185a2/scid/e23f3966-4135-4aa2-88ca-0baa7dce1e68
+                  - paragraph [ref=e1351]: Home Needs
+              - listitem [ref=e1352]:
+                - link "Electricals & Accessories" [ref=e1353] [cursor=pointer]:
+                  - /url: /cn/electricals-accessories/top-picks/cid/966dc8a0-8f21-420e-a897-8dd70b4228f6/scid/7734eb25-787d-4929-ab87-60d48b1391cb
+                  - paragraph [ref=e1354]: Electricals & Accessories
+              - listitem [ref=e1355]:
+                - link "Hygiene & Grooming" [ref=e1356] [cursor=pointer]:
+                  - /url: /cn/hygiene-grooming/feminine-hygiene/cid/875671b0-ec18-42c7-9749-c2cf165509fa/scid/1774e2ec-d3e9-4387-bf8b-661bacf44f1b
+                  - paragraph [ref=e1357]: Hygiene & Grooming
+              - listitem [ref=e1358]:
+                - link "Health & Baby Care" [ref=e1359] [cursor=pointer]:
+                  - /url: /cn/health-baby-care/sexual-wellness/cid/46853481-25d4-4126-947b-c6d96f0669f6/scid/95c866f4-0647-4368-9bb4-88ca0ff66ab0
+                  - paragraph [ref=e1360]: Health & Baby Care
+              - listitem [ref=e1361]:
+                - link "Homegrown Brands" [ref=e1362] [cursor=pointer]:
+                  - /url: /cn/homegrown-brands/tea-coffee/cid/2223e3e6-334d-4aa8-8e22-dcf577faa933/scid/353b3339-3f85-416d-b662-9c42685c96ce
+                  - paragraph [ref=e1363]: Homegrown Brands
+              - listitem [ref=e1364]:
+                - link "Paan Corner" [ref=e1365] [cursor=pointer]:
+                  - /url: /cn/paan-corner/cigarettes/cid/cd50825e-baf8-47fe-9abc-ed9556122a9a/scid/5bcbee47-7c83-4279-80f0-7ecc068496df
+                  - paragraph [ref=e1366]: Paan Corner
+          - generic [ref=e1368]:
+            - heading "Cities" [level=3] [ref=e1369]
+            - list [ref=e1370]:
+              - listitem [ref=e1371]:
+                - link "Agra" [ref=e1372] [cursor=pointer]:
+                  - /url: /delivery-in-agra
+                - text: "|"
+              - listitem [ref=e1373]:
+                - link "Ahmedabad" [ref=e1374] [cursor=pointer]:
+                  - /url: /delivery-in-ahmedabad
+                - text: "|"
+              - listitem [ref=e1375]:
+                - link "Ambala" [ref=e1376] [cursor=pointer]:
+                  - /url: /delivery-in-ambala
+                - text: "|"
+              - listitem [ref=e1377]:
+                - link "Amritsar" [ref=e1378] [cursor=pointer]:
+                  - /url: /delivery-in-amritsar
+                - text: "|"
+              - listitem [ref=e1379]:
+                - link "Bareilly" [ref=e1380] [cursor=pointer]:
+                  - /url: /delivery-in-bareilly
+                - text: "|"
+              - listitem [ref=e1381]:
+                - link "Belgavi" [ref=e1382] [cursor=pointer]:
+                  - /url: /delivery-in-belgavi
+                - text: "|"
+              - listitem [ref=e1383]:
+                - link "Bengaluru" [ref=e1384] [cursor=pointer]:
+                  - /url: /delivery-in-bengaluru
+                - text: "|"
+              - listitem [ref=e1385]:
+                - link "Bhiwadi" [ref=e1386] [cursor=pointer]:
+                  - /url: /delivery-in-bhiwadi
+                - text: "|"
+              - listitem [ref=e1387]:
+                - link "Chandigarh" [ref=e1388] [cursor=pointer]:
+                  - /url: /delivery-in-chandigarh
+                - text: "|"
+              - listitem [ref=e1389]:
+                - link "Chatrapati Sambhaji Nagar" [ref=e1390] [cursor=pointer]:
+                  - /url: /delivery-in-chatrapati-sambhaji-nagar
+                - text: "|"
+              - listitem [ref=e1391]:
+                - link "Chennai" [ref=e1392] [cursor=pointer]:
+                  - /url: /delivery-in-chennai
+                - text: "|"
+              - listitem [ref=e1393]:
+                - link "Coimbatore" [ref=e1394] [cursor=pointer]:
+                  - /url: /delivery-in-coimbatore
+                - text: "|"
+              - listitem [ref=e1395]:
+                - link "Davanagere" [ref=e1396] [cursor=pointer]:
+                  - /url: /delivery-in-davanagere
+                - text: "|"
+              - listitem [ref=e1397]:
+                - link "Dehradun" [ref=e1398] [cursor=pointer]:
+                  - /url: /delivery-in-dehradun
+                - text: "|"
+              - listitem [ref=e1399]:
+                - link "Delhi" [ref=e1400] [cursor=pointer]:
+                  - /url: /delivery-in-delhi
+                - text: "|"
+              - listitem [ref=e1401]:
+                - link "Faridabad" [ref=e1402] [cursor=pointer]:
+                  - /url: /delivery-in-faridabad
+                - text: "|"
+              - listitem [ref=e1403]:
+                - link "Ghaziabad" [ref=e1404] [cursor=pointer]:
+                  - /url: /delivery-in-ghaziabad
+                - text: "|"
+              - listitem [ref=e1405]:
+                - link "Gorakhpur" [ref=e1406] [cursor=pointer]:
+                  - /url: /delivery-in-gorakhpur
+                - text: "|"
+              - listitem [ref=e1407]:
+                - link "Guntur" [ref=e1408] [cursor=pointer]:
+                  - /url: /delivery-in-guntur
+                - text: "|"
+              - listitem [ref=e1409]:
+                - link "Gurugram" [ref=e1410] [cursor=pointer]:
+                  - /url: /delivery-in-gurugram
+                - text: "|"
+              - listitem [ref=e1411]:
+                - link "Hapur" [ref=e1412] [cursor=pointer]:
+                  - /url: /delivery-in-hapur
+                - text: "|"
+              - listitem [ref=e1413]:
+                - link "Haridwar" [ref=e1414] [cursor=pointer]:
+                  - /url: /delivery-in-haridwar
+                - text: "|"
+              - listitem [ref=e1415]:
+                - link "Hisar" [ref=e1416] [cursor=pointer]:
+                  - /url: /delivery-in-hisar
+                - text: "|"
+              - listitem [ref=e1417]:
+                - link "Hosur" [ref=e1418] [cursor=pointer]:
+                  - /url: /delivery-in-hosur
+                - text: "|"
+              - listitem [ref=e1419]:
+                - link "Hubballi" [ref=e1420] [cursor=pointer]:
+                  - /url: /delivery-in-hubballi
+                - text: "|"
+              - listitem [ref=e1421]:
+                - link "Hyderabad" [ref=e1422] [cursor=pointer]:
+                  - /url: /delivery-in-hyderabad
+                - text: "|"
+              - listitem [ref=e1423]:
+                - link "Indore" [ref=e1424] [cursor=pointer]:
+                  - /url: /delivery-in-indore
+                - text: "|"
+              - listitem [ref=e1425]:
+                - link "Jaipur" [ref=e1426] [cursor=pointer]:
+                  - /url: /delivery-in-jaipur
+                - text: "|"
+              - listitem [ref=e1427]:
+                - link "Jalandhar" [ref=e1428] [cursor=pointer]:
+                  - /url: /delivery-in-jalandhar
+                - text: "|"
+              - listitem [ref=e1429]:
+                - link "Kanpur" [ref=e1430] [cursor=pointer]:
+                  - /url: /delivery-in-kanpur
+                - text: "|"
+              - listitem [ref=e1431]:
+                - link "Karimnagar" [ref=e1432] [cursor=pointer]:
+                  - /url: /delivery-in-karimnagar
+                - text: "|"
+              - listitem [ref=e1433]:
+                - link "Karnal" [ref=e1434] [cursor=pointer]:
+                  - /url: /delivery-in-karnal
+                - text: "|"
+              - listitem [ref=e1435]:
+                - link "Kochi" [ref=e1436] [cursor=pointer]:
+                  - /url: /delivery-in-kochi
+                - text: "|"
+              - listitem [ref=e1437]:
+                - link "Kolkata" [ref=e1438] [cursor=pointer]:
+                  - /url: /delivery-in-kolkata
+                - text: "|"
+              - listitem [ref=e1439]:
+                - link "Kota" [ref=e1440] [cursor=pointer]:
+                  - /url: /delivery-in-kota
+                - text: "|"
+              - listitem [ref=e1441]:
+                - link "Kurukshetra" [ref=e1442] [cursor=pointer]:
+                  - /url: /delivery-in-kurukshetra
+                - text: "|"
+              - listitem [ref=e1443]:
+                - link "Lucknow" [ref=e1444] [cursor=pointer]:
+                  - /url: /delivery-in-lucknow
+                - text: "|"
+              - listitem [ref=e1445]:
+                - link "Ludhiana" [ref=e1446] [cursor=pointer]:
+                  - /url: /delivery-in-ludhiana
+                - text: "|"
+              - listitem [ref=e1447]:
+                - link "Madurai" [ref=e1448] [cursor=pointer]:
+                  - /url: /delivery-in-madurai
+                - text: "|"
+              - listitem [ref=e1449]:
+                - link "Meerut" [ref=e1450] [cursor=pointer]:
+                  - /url: /delivery-in-meerut
+                - text: "|"
+              - listitem [ref=e1451]:
+                - link "Mehsana" [ref=e1452] [cursor=pointer]:
+                  - /url: /delivery-in-mehsana
+                - text: "|"
+              - listitem [ref=e1453]:
+                - link "Mumbai" [ref=e1454] [cursor=pointer]:
+                  - /url: /delivery-in-mumbai
+                - text: "|"
+              - listitem [ref=e1455]:
+                - link "Mysuru" [ref=e1456] [cursor=pointer]:
+                  - /url: /delivery-in-mysuru
+                - text: "|"
+              - listitem [ref=e1457]:
+                - link "Nagpur" [ref=e1458] [cursor=pointer]:
+                  - /url: /delivery-in-nagpur
+                - text: "|"
+              - listitem [ref=e1459]:
+                - link "Nashik" [ref=e1460] [cursor=pointer]:
+                  - /url: /delivery-in-nashik
+                - text: "|"
+              - listitem [ref=e1461]:
+                - link "Noida" [ref=e1462] [cursor=pointer]:
+                  - /url: /delivery-in-noida
+                - text: "|"
+              - listitem [ref=e1463]:
+                - link "Palakkad" [ref=e1464] [cursor=pointer]:
+                  - /url: /delivery-in-palakkad
+                - text: "|"
+              - listitem [ref=e1465]:
+                - link "Panchkula" [ref=e1466] [cursor=pointer]:
+                  - /url: /delivery-in-panchkula
+                - text: "|"
+              - listitem [ref=e1467]:
+                - link "Panipat" [ref=e1468] [cursor=pointer]:
+                  - /url: /delivery-in-panipat
+                - text: "|"
+              - listitem [ref=e1469]:
+                - link "Patiala" [ref=e1470] [cursor=pointer]:
+                  - /url: /delivery-in-patiala
+                - text: "|"
+              - listitem [ref=e1471]:
+                - link "Prayagraj" [ref=e1472] [cursor=pointer]:
+                  - /url: /delivery-in-prayagraj
+                - text: "|"
+              - listitem [ref=e1473]:
+                - link "Puducherry" [ref=e1474] [cursor=pointer]:
+                  - /url: /delivery-in-puducherry
+                - text: "|"
+              - listitem [ref=e1475]:
+                - link "Pune" [ref=e1476] [cursor=pointer]:
+                  - /url: /delivery-in-pune
+                - text: "|"
+              - listitem [ref=e1477]:
+                - link "Rajkot" [ref=e1478] [cursor=pointer]:
+                  - /url: /delivery-in-rajkot
+                - text: "|"
+              - listitem [ref=e1479]:
+                - link "Rewari" [ref=e1480] [cursor=pointer]:
+                  - /url: /delivery-in-rewari
+                - text: "|"
+              - listitem [ref=e1481]:
+                - link "Saharanpur" [ref=e1482] [cursor=pointer]:
+                  - /url: /delivery-in-saharanpur
+                - text: "|"
+              - listitem [ref=e1483]:
+                - link "SAS Nagar" [ref=e1484] [cursor=pointer]:
+                  - /url: /delivery-in-sas-nagar
+                - text: "|"
+              - listitem [ref=e1485]:
+                - link "Sonipat" [ref=e1486] [cursor=pointer]:
+                  - /url: /delivery-in-sonipat
+                - text: "|"
+              - listitem [ref=e1487]:
+                - link "Surat" [ref=e1488] [cursor=pointer]:
+                  - /url: /delivery-in-surat
+                - text: "|"
+              - listitem [ref=e1489]:
+                - link "Tumkuru" [ref=e1490] [cursor=pointer]:
+                  - /url: /delivery-in-tumkuru
+                - text: "|"
+              - listitem [ref=e1491]:
+                - link "Udaipur" [ref=e1492] [cursor=pointer]:
+                  - /url: /delivery-in-udaipur
+                - text: "|"
+              - listitem [ref=e1493]:
+                - link "Vadodara" [ref=e1494] [cursor=pointer]:
+                  - /url: /delivery-in-vadodara
+                - text: "|"
+              - listitem [ref=e1495]:
+                - link "Valsad" [ref=e1496] [cursor=pointer]:
+                  - /url: /delivery-in-valsad
+                - text: "|"
+              - listitem [ref=e1497]:
+                - link "Varanasi" [ref=e1498] [cursor=pointer]:
+                  - /url: /delivery-in-varanasi
+                - text: "|"
+              - listitem [ref=e1499]:
+                - link "Vellore" [ref=e1500] [cursor=pointer]:
+                  - /url: /delivery-in-vellore
+                - text: "|"
+              - listitem [ref=e1501]:
+                - link "Vijayawada" [ref=e1502] [cursor=pointer]:
+                  - /url: /delivery-in-vijayawada
+                - text: "|"
+              - listitem [ref=e1503]:
+                - link "Warangal" [ref=e1504] [cursor=pointer]:
+                  - /url: /delivery-in-warangal
+          - generic [ref=e1506]:
+            - generic [ref=e1507]:
+              - generic [ref=e1508]:
+                - link "instagram" [ref=e1509] [cursor=pointer]:
+                  - /url: https://www.instagram.com/zeptonow/
+                - link "twitter" [ref=e1510] [cursor=pointer]:
+                  - /url: https://x.com/ZeptoNow
+                - link "facebook" [ref=e1511] [cursor=pointer]:
+                  - /url: https://www.facebook.com/Zeptonow/
+                - link "linkedin" [ref=e1512] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/company/zeptonow/
+              - paragraph [ref=e1513]: © Zepto Marketplace Private Limited
+              - paragraph [ref=e1514]: "fssai lic no : 11224999000872"
+            - generic [ref=e1515]:
+              - generic [ref=e1516]:
+                - link "Home" [ref=e1517] [cursor=pointer]:
+                  - /url: /
+                  - paragraph [ref=e1518]: Home
+                - link "Delivery Areas" [ref=e1519] [cursor=pointer]:
+                  - /url: /s/del-areas
+                  - paragraph [ref=e1520]: Delivery Areas
+                - link "Careers" [ref=e1521] [cursor=pointer]:
+                  - /url: https://zepto.com/careers
+                  - paragraph [ref=e1522]: Careers
+                - link "Customer Support" [ref=e1523] [cursor=pointer]:
+                  - /url: /s/customer-support
+                  - paragraph [ref=e1524]: Customer Support
+                - link "Press" [ref=e1525] [cursor=pointer]:
+                  - /url: /s/press
+                  - paragraph [ref=e1526]: Press
+                - link "Mojo - a Zepto Blog" [ref=e1527] [cursor=pointer]:
+                  - /url: /blog
+                  - paragraph [ref=e1528]: Mojo - a Zepto Blog
+                - link "Zepto Recipes" [ref=e1529] [cursor=pointer]:
+                  - /url: /pip/Explore%20All%20Recipes/100000315
+                  - paragraph [ref=e1530]: Zepto Recipes
+              - generic [ref=e1531]:
+                - link "Privacy Policy" [ref=e1532] [cursor=pointer]:
+                  - /url: /s/privacy-policy
+                  - paragraph [ref=e1533]: Privacy Policy
+                - link "Terms of Use" [ref=e1534] [cursor=pointer]:
+                  - /url: /s/terms-of-service
+                  - paragraph [ref=e1535]: Terms of Use
+                - link "Responsible Disclosure Policy" [ref=e1536] [cursor=pointer]:
+                  - /url: /s/responsible-disclosure-policy
+                  - paragraph [ref=e1537]: Responsible Disclosure Policy
+                - link "Sell on Zepto" [ref=e1538] [cursor=pointer]:
+                  - /url: https://brands.zepto.co.in
+                  - paragraph [ref=e1539]: Sell on Zepto
+                - link "Deliver with Zepto" [ref=e1540] [cursor=pointer]:
+                  - /url: https://www.zepto.com/s/delivery-partners
+                  - paragraph [ref=e1541]: Deliver with Zepto
+                - link "Franchise with Zepto" [ref=e1542] [cursor=pointer]:
+                  - /url: https://franchise.zepto.co.in/growth-partner
+                  - paragraph [ref=e1543]: Franchise with Zepto
+                - link "Investor Relations" [ref=e1544] [cursor=pointer]:
+                  - /url: https://investors.zepto.com
+                  - paragraph [ref=e1545]: Investor Relations
+            - generic [ref=e1546]:
+              - paragraph [ref=e1547]: Download App
+              - generic [ref=e1548]:
+                - button "Get it on play store" [ref=e1549] [cursor=pointer]:
+                  - paragraph [ref=e1550]: Get it on play store
+                - button "Get it on app store" [ref=e1551] [cursor=pointer]:
+                  - paragraph [ref=e1552]: Get it on app store
+    - region "Notifications alt+T"
+  - alert [ref=e1553]
+```
+
+# Test source
+
+```ts
+  1  | import { test, expect } from '@playwright/test';
+  2  | import { chromium } from 'playwright';
+  3  | //test.use({ viewport: { width: 1920, height: 1080 } });
+  4  | 
+  5  | test('logging into AJio website:', async({ page }) =>
+  6  | {
+  7  |   await page.goto("https://www.zepto.com/");
+  8  |  
+  9  | await page.getByText('Fresh', { exact: true }).first().click();
+  10 | 
+  11 | // Scroll down first to force lazy-loaded content to render
+  12 | let previousHeight = 0;
+  13 | while (true) {
+  14 |   const currentHeight = await page.evaluate(() => document.body.scrollHeight);
+  15 |   if (currentHeight === previousHeight) break;
+  16 |   await page.mouse.wheel(0, 3000);
+  17 |   previousHeight = currentHeight;
+  18 |   await page.waitForTimeout(800);
+  19 | }
+  20 | 
+  21 | // Now filter — using a more robust CSS selector instead of strict XPath
+  22 | const productCards = page.locator('div.relative.inline-block.cursor-pointer');
+  23 | const matchingCards = productCards.filter({ 
+  24 |   hasText: /1[0-9][0-9]\s*g|200\s*g/ 
+  25 | });
+  26 | 
+  27 | const count = await matchingCards.count();
+  28 | console.log(`Found ${count} products with 200 grams`);
+  29 | 
+  30 | for (let i = 0; i < count; i++) {
+  31 |   const card = matchingCards.nth(i);
+  32 |   await card.scrollIntoViewIfNeeded();
+  33 | 
+  34 |   const addButton = card.locator('button', { hasText: 'ADD' });
+  35 |   const increaseButton = card.locator('button', { hasText: 'Increase quantity' });
+  36 | 
+  37 |   if (await addButton.isVisible({ timeout: 2000 }).catch(() => false)) {
+  38 |     await addButton.click();
+  39 |   } else if (await increaseButton.isVisible({ timeout: 2000 }).catch(() => false)) {
+  40 |     // Item already in cart — increment quantity instead
+  41 |     await increaseButton.click();
+  42 |   } else {
+  43 |     console.warn(`Card ${i}: neither ADD nor Increase quantity button found, skipping.`);
+  44 |   }
+  45 | }
+  46 | await page.getByText('All',({exact:true})).click();
+> 47 | await page.locator('a[href*="meats-fish-eggs"]').first().click();
+     |                                                          ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  48 | 
+  49 | // More specific — targets sidebar only
+  50 | const sidebar = page.locator('div.no-scrollbar');
+  51 | await sidebar.getByText('Cold Cuts', { exact: true }).scrollIntoViewIfNeeded();
+  52 | await sidebar.getByText('Cold Cuts', { exact: true }).click();
+  53 | 
+  54 | 
+  55 | 
+  56 | });
+  57 | 
+  58 | 
+```

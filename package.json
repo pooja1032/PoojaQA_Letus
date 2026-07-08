@@ -5,9 +5,14 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.3"
+    "@types/node": "^25.9.3",
+    "allure-commandline": "^2.13.11",
+    "allure-playwright": "^2.0.0"
   },
   "scripts": {
-    "test:zepto": "npx playwright test tests/Zepto.spec.ts --project=chromium --workers=1"
+    "test:Zepto": "npx playwright test tests/Zepto.spec.ts --project=chromium --workers=1",
+    "test": "npx playwright test",
+    "allure:generate": "npx allure generate --clean -o playwright-report/allure-report",
+    "allure:open": "npx allure open playwright-report/allure-report"
   }
 }
